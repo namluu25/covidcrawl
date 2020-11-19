@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title></title>
+        <meta name="description" content="">
+
+        <link rel="shortcut icon" href="favicon.ico">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/html5-boilerplate.css">
+        <link rel="stylesheet" href="css/main.css">
+    <script>
+        $(function() {
+
+            var news = [];
+        
+        $.getJSON('/Users/namluu/Downloads/covidcrawl/image_dantri.json', fucntion(data) {
+                $.each(data.img, function(i,f) {
+                    var tblRow = "<tr>" + "<td>" + f.object + "</td>" + "<td>" + f.img + "<td>" + f.caption + "</td>" + "<td>" + f.source +"</td>" + "</tr>"
+                    $(tblRow).appendTo("#userdata tbody");
+                });
+        });
+        });
+    </script>
+    </head>
+
+    <body>
+        <p align="center" style="bold"> COVID-19 NEWS</p>
+        <div class="wrapper">
+            <div class="profile">
+                <table id="userdata" border="2">
+                    <thead>
+                        <th>Caption</th>
+                        <th>Source</th>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
