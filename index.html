@@ -1,86 +1,23 @@
 <html>
 <head>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
-
-<!-- <script>
-
-    $(function() {
-
-
-   var news = [];
-
-   $.getJSON('image_dantri.json', function(data) {
-       $.each(data.img, function(i, f) {
-          var tblRow = "<tr>" + "<td>" + f.caption + "</td>" +"<td>" + f.source  + "</tr>"
-           $(tblRow).appendTo("#news tbody");
-     });
-
-   });
-
-});
-</script>  -->
-<script>
-        $(document).ready(function() {
-            $.getJSON('image_dantri.json', function(data){
-                console.log(data) //just to log in console as well
-                var img = '';
-                $.each(data.img, function(key, value){
-                    img += '<tr>';
-                    // img += '<td>'+value.id+'</td>';
-                    img += '<td>'+value.caption+'</td>';
-                    img += '<td><img src="'+value.source+'"></td>';
-                    img += '</tr>';
-                });
-                $(img).appendTo("#news tbody");
-            });
-            $.getJSON('image_tuoitre.json', function(data){
-                console.log(data) //just to log in console as well
-                var img = '';
-                $.each(data.img, function(key, value){
-                    img += '<tr>';
-                    // img += '<td>'+value.id+'</td>';
-                    img += '<td>'+value.caption+'</td>';
-                    img += '<td><img src="'+value.source+'"></td>';
-                    img += '</tr>';
-                });
-                $(img).appendTo("#news tbody");
-            });
-            $.getJSON('image_vnexpress.json', function(data){
-                console.log(data) //just to log in console as well
-                var img = '';
-                $.each(data.img, function(key, value){
-                    img += '<tr>';
-                    // img += '<td>'+value.id+'</td>';
-                    img += '<td>'+value.caption+'</td>';
-                    img += '<td><img src="'+value.source+'"></td>';
-                    img += '</tr>';
-                });
-                $(img).appendTo("#news tbody");
-            });
-        });
-</script> 
-
-<title>COVID-19 NEWS</title>
-
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+        <script src="main.js"></script>
+        <title>COVID-19 NEWS</title>
 </head>
 
 <body>
+        <div class="wrapper">
+        <div class="profile">
+        <table id= "news" border="2">
+                <thead>
+                    <th>Caption</th>
+                    <th>Source</th>
+                </thead>
+            <tbody></tbody>
+        </table>
 
-<div class="wrapper">
-<div class="profile">
-   <table id= "news" border="2">
-  <!-- <thead>
-            <th>Caption</th>
-            <th>Source</th>
-        </thead> -->
-      <tbody>
-
-       </tbody>
-   </table>
-
-</div>
-</div>
-
+        </div>
+        </div>
 </body>
 </html>
 
