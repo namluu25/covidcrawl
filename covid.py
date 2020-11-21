@@ -89,9 +89,20 @@ class covid_tuoitre(scrapy.Spider):
         source = response.css('img::attr(src)').extract()
         caption = response.css('img::attr(alt)').extract()
 
-        for i in range(0, len(caption)):
+        """Why there is 2 loop ? Because from the 4th picture, captions and sources do not match
+        source needs to be more 1 position than caption
+        caption[i] => source[i+1]
+        """
+
+        for i in range(0, 3):
             tuoitre_covid['img'].append({
                 "source": source[i],
+                "caption": caption[i],
+            })
+
+        for i in range(4, len(caption)):
+            tuoitre_covid['img'].append({
+                "source": source[i + 1],
                 "caption": caption[i],
             })
 
@@ -121,10 +132,13 @@ class covid_vnexpress(scrapy.Spider):
         vnexpress_covid = {'img': []}
 
         for image in response.css("img"):
-            vnexpress_covid['img'].append({
-                "source": image.attrib["src"],
-                "caption": image.attrib["alt"],
-            })
+            if "base64" in image.attrib["src"]:
+                pass
+            else:
+                vnexpress_covid['img'].append({
+                    "source": image.attrib["src"],
+                    "caption": image.attrib["alt"],
+                })
 
         with open(f"{JSON_directory}image_vnexpress.json", "w") as image_file:
             json.dump(vnexpress_covid, image_file)
