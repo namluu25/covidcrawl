@@ -100,7 +100,7 @@ class covid_tuoitre(scrapy.Spider):
                 "caption": caption[i],
             })
 
-        for i in range(4, len(caption)):
+        for i in range(4, len(caption) - 5):
             tuoitre_covid['img'].append({
                 "source": source[i + 1],
                 "caption": caption[i],
