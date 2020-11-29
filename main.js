@@ -1,50 +1,27 @@
-$(document).ready(function() {
-            // $.getJSON('image_dantri.json', function(data){
-            //     console.log(data)
-            //     var img = '';
-            //     $.each(data.img, function(key, value){
-            //         img += '<img src="'+value.source+'" style="width:400px;height:300px;" class="center"></br>';
-            //         img += '<h2 style="text-align:center; font-size:200%">'+value.caption+'<h2></br>';
-            //     });
-            //     $(img).appendTo("#imgdt");
-            // });
-            // $.getJSON('image_dantri.json', function(data)
-            //         {
-            //             for(i=0; i < 20; i++)
-            //             {
-            //                 $("#imgdt").append("<img src="+data.img[i].source+" >" + "\n" + data.img[i].caption + "</br>" + "\n\n");
-            //                 $("#imgdt").append("\n");
-            //             }
-            //         });
-            
-            $.getJSON('image_tuoitre.json', function(data){
+$(document).ready(function()
+{   
+        $.getJSON("./image_dantri.json", function(data)
+        {
+            var i;
+            for(i=0; i<30; ++i)
                 {
-                    img1 += '<img src="'+data.img[1].source+'" style="width:400px;height:300px;" class="center"></br>';
-                    img1 += '<h2 style="text-align:center; font-size:200%">'+data.img[1].caption+'<h2></br>';
+                    $("#dt" + i).append("<a href='" + data.img[i].news_source + "'><img src ='" + data.img[i].source + "'></a></br><a href='" + data.img[i].news_source + "'>" + data.img[i].caption + "</a>");
                 }
-                $(img1).appendTo("#1");
-            });
-            $.getJSON('image_tuoitre.json', function(data){
+        });
+        $.getJSON("./image_tuoitre.json", function(data)
+        {
+            var i;
+            for(i=0; i<30; ++i)
                 {
-                    ("#2").append("<img src="+data.img[8].source+" >" + "\n" + "</br>" + data.img[8].caption + "\n\n");
+                    $("#tt" + i).append("<a href='" + data.img[i].news_source + "'><img src ='" + data.img[i].source + "'></a></br><a href='" + data.img[i].news_source + "'>" + data.img[i].caption + "</a>");
                 }
-            });
-            $.getJSON('image_tuoitre.json', function(data){
-                console.log(data)
-                var img = '';
-                $.each(data.img, function(key, value){
-                    img += '<img src="'+value.source+'" style="width:400px;height:300px;" class="center"></br>';
-                    img += '<h2 style="text-align:center; font-size:200%">'+value.caption+'<h2></br>';
-                });
-                $(img).appendTo("#imgtt");
-            });
-            $.getJSON('image_vnexpress.json', function(data){
-                console.log(data)
-                var img = '';
-                $.each(data.img, function(key, value){
-                    img += '<img src="'+value.source+'" style="width:400px;height:300px;" class="center"></br>';
-                    img += '<h2 style="text-align:center; font-size:200%">'+value.caption+'<h2></br>';
-                });
-                $(img).appendTo("#imgve");
-            });
+        });
+        $.getJSON("./image_vnexpress.json", function(data)
+        {
+            var i;
+            for(i=0; i<30; ++i)
+                {
+                    $("#ve" + i).append("<a href='" + data.img[i].news_source + "'><img src ='" + data.img[i].source + "'></a></br><a href='" + data.img[i].news_source + "'>" + data.img[i].caption + "</a>");
+                }
+        });
 });
