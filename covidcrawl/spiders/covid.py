@@ -22,7 +22,7 @@ class makeDir():
         return JSON_path
 
     def HTML_dir(self):
-        HTML_path = JSON_path = os.path.join(os.getcwd(), "HTML File/")
+        HTML_path = os.path.join(os.getcwd(), "HTML File/")
 
         if not os.path.exists(HTML_path):
             os.mkdir(HTML_path)
@@ -56,10 +56,23 @@ class covid_dantri(scrapy.Spider):
         # Writing source and caption of image into JSON file
         dantri_covid = {'img': []}
 
-        for image in response.css("img"):
+        source = []
+        for i in range(1, len(response.css("img::attr(src)").extract())):
+            source.append(response.css("img::attr(src)").extract()[i])
+
+        caption = []
+        for i in range(1, len(response.css("img::attr(alt)").extract())):
+            caption.append(response.css("img::attr(alt)").extract()[i])
+
+        news_source = []
+        for i in range(len(response.css("a.news-item__avatar::attr(href)").extract())):
+            news_source.append("dantri.com.vn" + str(response.css("a.news-item__avatar::attr(href)").extract()[i]))
+
+        for i in range(0, len(source)):
             dantri_covid['img'].append({
-                "source": image.attrib["src"],
-                "caption": image.attrib["alt"],
+                "source": source[i],
+                "caption": caption[i],
+                "news_source": news_source[i]
             })
 
         with open(f"{JSON_directory}/image_dantri.json", "w") as image_file:
@@ -86,30 +99,48 @@ class covid_tuoitre(scrapy.Spider):
 
         tuoitre_covid = {'img': []}
 
-        source = response.css('img::attr(src)').extract()
-        caption = response.css('img::attr(alt)').extract()
+        source = []
+        for i in range(5, len(response.css('img::attr(src)').extract()) - 5):
+            source.append(response.css('img::attr(src)').extract()[i])
+
+        caption = []
+        for i in range(4, len(response.css('img::attr(alt)').extract()) - 5):
+            caption.append(response.css('img::attr(alt)').extract()[i])
+
+        news_source = []
+        for i in range(0, len(response.css("h3.title-news a:nth-child(1)::attr(href)").extract())):
+            news_source.append(
+                "tuoitre.vn" + str(response.css("h3.title-news a:nth-child(1)::attr(href)").extract()[i]))
+
+        for i in range(len(news_source)):
+            tuoitre_covid['img'].append({
+                "source": source[i],
+                "caption": caption[i],
+                "news_source": news_source[i]
+            })
 
         """Why there is 2 loop ? Because from the 4th picture, captions and sources do not match
         source needs to be more 1 position than caption
         caption[i] => source[i+1]
         """
 
-        for i in range(0, 3):
-            tuoitre_covid['img'].append({
-                "source": source[i],
-                "caption": caption[i],
-            })
-
-        for i in range(4, len(caption) - 5):
-            tuoitre_covid['img'].append({
-                "source": source[i + 1],
-                "caption": caption[i],
-            })
+        # for i in range(0, 3):
+        #     tuoitre_covid['img'].append({
+        #         "source": source[i],
+        #         "caption": caption[i],
+        #     })
+        #
+        # for i in range(4, len(caption) - 5):
+        #     tuoitre_covid['img'].append({
+        #         "source": source[i + 1],
+        #         "caption": caption[i],
+        #     })
 
         with open(f"{JSON_directory}image_tuoitre.json", "w") as image_file:
             json.dump(tuoitre_covid, image_file)
 
 
+####### Note: Fix vnexpressssss
 # For vnexpress.net
 class covid_vnexpress(scrapy.Spider):
     name = "covid_vnexpress"
@@ -131,14 +162,45 @@ class covid_vnexpress(scrapy.Spider):
         # Writing source and caption of image into JSON file
         vnexpress_covid = {'img': []}
 
-        for image in response.css("img"):
-            if "base64" in image.attrib["src"]:
+        caption = []
+        for i in range(0, len(response.css("p.description a:nth-child(1)::attr(title)").extract())):
+            caption.append(response.css("p.description a:nth-child(1)::attr(title)").extract()[i])
+
+        news_source = []
+        for i in range(0, len(response.css("p.description a:nth-child(1)::attr(href)").extract())):
+            if "#box_comment_vne" in response.css("p.description a:nth-child(1)::attr(href)").extract()[i]:
                 pass
             else:
-                vnexpress_covid['img'].append({
-                    "source": image.attrib["src"],
-                    "caption": image.attrib["alt"],
-                })
+                news_source.append(response.css("p.description a:nth-child(1)::attr(href)").extract()[i])
+
+        # Complicated stuff
+        src_fake = []
+        for i in range(1, len(response.css("img::attr(src)").extract())):
+            src_fake.append(response.css("img::attr(src)").extract()[i])
+
+        alt_fake = []
+        for i in range(1, len(response.css("img::attr(alt)").extract())):
+            alt_fake.append(response.css("img::attr(alt)").extract()[i])
+
+        src_alt_fake = {}
+        for i in range(len(alt_fake)):
+            src_alt_fake[alt_fake[i]] = src_fake[i]
+
+        source = []
+        for i in range(len(news_source)):
+            source.append("/")
+
+        for i in range(len(caption)):
+            for alt, src in src_alt_fake.items():
+                if alt == caption[i]:
+                    source[i] = src
+
+        for i in range(0, len(source)):
+            vnexpress_covid['img'].append({
+                "source": source[i],
+                "caption": caption[i],
+                "news_source": news_source[i]
+            })
 
         with open(f"{JSON_directory}image_vnexpress.json", "w") as image_file:
             json.dump(vnexpress_covid, image_file)
