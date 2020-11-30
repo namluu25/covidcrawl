@@ -66,7 +66,7 @@ class covid_dantri(scrapy.Spider):
 
         news_source = []
         for i in range(len(response.css("a.news-item__avatar::attr(href)").extract())):
-            news_source.append("dantri.com.vn" + str(response.css("a.news-item__avatar::attr(href)").extract()[i]))
+            news_source.append("https://dantri.com.vn" + str(response.css("a.news-item__avatar::attr(href)").extract()[i]))
 
         for i in range(0, len(source)):
             dantri_covid['img'].append({
@@ -109,8 +109,7 @@ class covid_tuoitre(scrapy.Spider):
 
         news_source = []
         for i in range(0, len(response.css("h3.title-news a:nth-child(1)::attr(href)").extract())):
-            news_source.append(
-                "tuoitre.vn" + str(response.css("h3.title-news a:nth-child(1)::attr(href)").extract()[i]))
+            news_source.append("https://tuoitre.vn" + str(response.css("h3.title-news a:nth-child(1)::attr(href)").extract()[i]))
 
         for i in range(len(news_source)):
             tuoitre_covid['img'].append({
