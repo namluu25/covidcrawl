@@ -11,6 +11,7 @@
 - Xampp
 
 ### Technologies
+- Python
 - HTML 
 - CSS
 - JavaScript 
