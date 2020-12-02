@@ -18,8 +18,8 @@
 - JQuery
 
 ## Requirements
-- [Xampp] (https://www.apachefriends.org/download.html "Xampp Downloads")
-- [Python3] (https://www.python.org/downloads/ "Python")
+- [Xampp](https://www.apachefriends.org/download.html "Xampp Downloads")
+- [Python3](https://www.python.org/downloads/ "Python")
 
 ## How to use it
 
