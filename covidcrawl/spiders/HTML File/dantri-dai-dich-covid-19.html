@@ -1,0 +1,1580 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    
+
+    <meta charset="utf-8">
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="//vcdn.dantri.com.vn"/>
+<link rel="dns-prefetch" href="//icdn.dantri.com.vn"/>
+<link rel="dns-prefetch" href="//cdnweb.dantri.com.vn"/>
+<link rel="dns-prefetch" href="//cdndulich.dantri.com.vn"/>
+<link rel="dns-prefetch" href="//cdnduhoc.dantri.com.vn"/>
+<link rel="dns-prefetch" href="//cdnmobile.dantri.com.vn"/>
+<link rel="dns-prefetch" href="//webapi.dantri.com.vn"/>
+<link rel="dns-prefetch" href="//captcha.dantri.com.vn"/>
+<link rel="dns-prefetch" href="//comment.dantri.com.vn"/>
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com"/>
+<link rel="dns-prefetch" href="//cdn.jwplayer.com"/>
+<link rel="dns-prefetch" href="//www.googletagmanager.com"/>
+<link rel="dns-prefetch" href="//media1.admicro.vn"/>
+<link rel="dns-prefetch" href="//logsbin.dantri.com.vn"/>
+<link rel="dns-prefetch" href="//www.google-analytics.com"/>
+<link rel="dns-prefetch" href="//www.googletagmanager.com"/>
+
+    <script>
+    window.wDataLayer = {"platform":"web","page_type":"cate","item_id":null,"cate_id":"978","tags":[],"cate_name":"","cate_list":null,"sub_cates":null,"isBlockedAds":0,"label":"Web","author_id":null,"published_date":null};
+</script>
+    <script>
+    window.DONGLOGS_WAITDOCREADY=0,function(e,t){var o,n;"object"==typeof exports&&"undefined"!=typeof module?module.exports=t():"function"==typeof define&&define.amd?define(t):(e=e||self,o=e.Cookies,(n=e.Cookies=t()).noConflict=function(){return e.Cookies=o,n})}(this,function(){"use strict";function a(e){for(var t=1;t<arguments.length;t++){var o=arguments[t];for(var n in o)e[n]=o[n]}return e}var w={read:function(e){return e.replace(/%3B/g,";")},write:function(e){return e.replace(/;/g,"%3B")}};return function t(s,i){function o(e,t,o){if("undefined"!=typeof document){"number"==typeof(o=a({},i,o)).expires&&(o.expires=new Date(Date.now()+864e5*o.expires)),o.expires&&(o.expires=o.expires.toUTCString()),e=w.write(e).replace(/=/g,"%3D"),t=s.write(String(t),e);var n="";for(var r in o)o[r]&&(n+="; "+r,!0!==o[r]&&(n+="="+o[r].split(";")[0]));return document.cookie=e+"="+t+n}}return Object.create({set:o,get:function(e){if("undefined"!=typeof document&&(!arguments.length||e)){for(var t=document.cookie?document.cookie.split("; "):[],o={},n=0;n<t.length;n++){var r=t[n].split("="),i=r.slice(1).join("="),a=w.read(r[0]).replace(/%3D/g,"=");if(o[a]=s.read(i,a),e===a)break}return e?o[e]:o}},remove:function(e,t){o(e,"",a({},t,{expires:-1}))},withAttributes:function(e){return t(this.converter,a({},this.attributes,e))},withConverter:function(e){return t(a({},this.converter,e),this.attributes)}},{attributes:{value:Object.freeze(i)},converter:{value:Object.freeze(s)}})}(w,{path:"/"})}),window.webLog=window.webLog||{},function(r){var i=r.aff=r.aff||{};i._params="_waff_params",i._items="_waff_items",i.init=function(){try{var e=document.location.search;if(!e||-1===e.indexOf("aff_id"))return;for(var t={},o=new URLSearchParams(document.location.search).entries(),n={done:!1};!n.done;)(n=o.next()).value&&(t[n.value[0]]=n.value[1]);i._affParams=t,r.store.setItem(i._params,t)}catch(e){}},i.convert=function(){var e=i._affParams||r.store.getItem(i._params);if(!e)return"affParams not found";var t=i._affParams||JSON.parse(e);if(!t.aff_id)return"aff_id not found";var o=i._cartItems||r.store.getItem(i._items);return o?(t.cart_items=i._cartItems||JSON.parse(o),t.cart_items.constructor!==Array?"cartItems is invalid []":(t.event="Conversion",t.moment=(new Date).toISOString(),t.host=document.location.host,t.uuid=r.services.default.getId(),t.session_id=r.services.default.getSessionId(),t.user_agent=r.client.userAgent,r.http.postJson(i.POSTBACK,t,function(){i._affParams=null,i._cartItems=null,r.store.setItem(i._params,""),r.store.setItem(i._items,""),console.log("Conversion posted.")}),console.log("Postback",t),!0)):"cartItems not found"}}(window.webLog),window.webLog=window.webLog||{},window.webLog.client={},function(e){e.userAgent=(navigator.userAgent||navigator.vendor||window.opera||"").substr(0,250),e.browser=function(){var e=!!window.chrome&&!!window.chrome.webstore;if(e)return"Chrome";if("undefined"!=typeof InstallTrigger)return"Firefox";if(/constructor/i.test(window.HTMLElement)||"[object SafariRemoteNotification]"===(!window.safari||void 0!==window.safari&&window.safari.pushNotification).toString())return"Safari";var t=!!document.documentMode;if(t)return"IE";var o=!!window.opr&&!!window.opr.addons||!!window.opera||0<=navigator.userAgent.indexOf(" OPR/");return o?"Opera":!t&&window.StyleMedia||!(!e&&!o||!window.CSS)}(),e.os=function(){var e=navigator.userAgent||navigator.vendor||window.opera;if(/windows phone/i.test(e))return"Windows Phone";if(/android/i.test(e))return"Android";return!/iPad|iPhone|iPod/.test(e)||window.MSStream?"unknown":"iOS"}(),e.newId=function(e){var t,o,n="";for(e=e||32,t=0;t<e;t++)o=16*Math.random()|0,8!==t&&12!==t&&16!==t&&20!==t||(n+="-"),n+=(12===t?4:16===t?3&o|8:o).toString(16);return n},e.validId=function(e){return e&&36===e.length&&e.match(/^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$/)}}(window.webLog.client),window.webLog=window.webLog||{},function(e){"use strict";e=e||window;var o=[],n=!1,r=!1;function i(){if(!n){n=!0;for(var e=0;e<o.length;e++)o[e].fn.call(window,o[e].ctx);o=[]}}function a(){"complete"===document.readyState&&i()}e.ondocReady=function(e,t){if("function"!=typeof e)throw new TypeError("callback for docReady(fn) must be a function");n?setTimeout(function(){e(t)},1):(o.push({fn:e,ctx:t}),"complete"===document.readyState||!document.attachEvent&&"interactive"===document.readyState?setTimeout(i,1):r||(document.addEventListener?(document.addEventListener("DOMContentLoaded",i,!1),window.addEventListener("load",i,!1)):(document.attachEvent("onreadystatechange",a),window.attachEvent("onload",i)),r=!0))}}(window.webLog),window.webLog=window.webLog||{},window.webLog.dom={},function(e){e.harvest=function(e,o,n){var t=document.querySelectorAll(e);if(!t.length)return null;var r={};return o.forEach(function(e){r[e]=[]}),t.forEach(function(t){o.forEach(function(e){t.hasAttribute(e)?r[e].push(t.getAttribute(e)):n&&r[e].push(null)})}),r},e.scrolledTo=function(e){var t=window.$;if(t){var o=t(window).scrollTop(),n=o+t(window).height();try{var r=t(e).offset().top,i=r+t(e).height()}catch(e){return}return i<=n&&o<=r&&r}}}(window.webLog.dom),window.webLog=window.webLog||{},window.webLog.http={},function(e){e.postJson=function(e,t,o){var n=new XMLHttpRequest;n.open("POST",e,!0),n.setRequestHeader("Content-Type","application/json; charset=utf-8"),n.timeout=3e3,n.onreadystatechange=function(){4===n.readyState&&"function"==typeof o&&o(n.status,n.responseText)},n.send(JSON.stringify(t))}}(window.webLog.http),window.webLog=window.webLog||{},function(r){r.inspectlet=function(o,e){var t=Math.round(e/30),n=r.store.getItem("__insp");(n||(n=Math.floor(Math.random()*t+1).toString(),r.store.setItem("__insp",n)))&&"456"===n&&(window.__insp=window.__insp||[],window.__insp.push(["wid",o]),window.__insp.push(["identify",r.services.default.getId()]),setTimeout(function(){var e,t;void 0===window.__inspld&&(window.__inspld=1,(e=document.createElement("script")).type="text/javascript",e.async=!0,e.id="inspsync",e.src=("https:"===document.location.protocol?"https":"http")+"://cdn.inspectlet.com/inspectlet.js?wid="+o+"&r="+Math.floor((new Date).getTime()/36e5),(t=document.getElementsByTagName("script")[0]).parentNode.insertBefore(e,t))},0))}}(window.webLog),window.webLog=window.webLog||{},window.webLog.store={},function(e){e.method="cookie",e.getItem=function(e){var t=window.Cookies,o="."+window.COOKIE_DOMAIN;try{var n=window.localStorage.getItem(e)||t.get(e)||void 0}catch(e){}return n&&t.set(e,n,{domain:o}),n},e.setItem=function(e,t){var o=window.Cookies,n="."+window.COOKIE_DOMAIN;try{return o.set(e,t,{domain:n})}catch(e){return}},e.session={getItem:function(e){try{return window.sessionStorage.getItem(e)}catch(e){return}},setItem:function(e,t){try{return window.sessionStorage.setItem(e,t),e}catch(e){return}}}}(window.webLog.store),window.webLog=window.webLog||{},function(i){var a="//rec.donglogs.com/heatmap",t=[];function o(e){var t,o,n;null==(e=e||window.event).pageX&&null!=e.clientX&&(o=(t=e.target&&e.target.ownerDocument||document).documentElement,n=t.body,e.pageX=e.clientX+(o&&o.scrollLeft||n&&n.scrollLeft||0)-(o&&o.clientLeft||n&&n.clientLeft||0),e.pageY=e.clientY+(o&&o.scrollTop||n&&n.scrollTop||0)-(o&&o.clientTop||n&&n.clientTop||0))}function n(e,t,o,n){var r={event:e,moment:(new Date).toISOString(),url:document.location.href,uuid:i.services.default.getId(),width:window.innerWidth,height:window.innerHeight,page_y:Math.floor(window.pageYOffset),click_x:t,click_y:o,move_coords:n,abtest:i._abtest||null};i.http.postJson(a,r)}window.TRACK_HEAT&&(document.onmousemove=function(e){o(e),t.push([e.pageX,e.pageY]),9<t.length&&(n("Move",null,null,JSON.stringify(t)),t=[])},document.onclick=function(e){o(e),n("Click",e.pageX,e.pageY,null)})}(window.webLog),window.webLog=window.webLog||{},window.webLog.services=window.webLog.services||{},function(e){var t,o,n="default",r="__wuid",i="__wssid",a=e.store,s=e.http,w=e.client;function c(e,t){var o,n=typeof e;if(null==e||"string"==n)o=e;else if("object"==n)o=t?e:e instanceof Array?JSON.stringify(e.map(function(e){return c(e,1)})):JSON.stringify(e);else try{o=e.toString()}catch(e){o=void 0}return o}function d(){return o||((o=a.session.getItem(i))||(o=w.newId(6),a.session.setItem(i,o)),o)}function u(e){if(!e)return{};var t=document.createElement("a");return t.href=e,t}function f(){return t||((t=a.getItem(r))||(e=(window.location.hash||"").toLowerCase(),(t=w.validId(e)?e:null)&&void 0!==a.method&&a.setItem(r,t),t&&void 0===a.method&&window.WEBLOG_ALLOW_URL_HASH_WUID),t||(t=w.newId(),void 0!==a.method?a.setItem(r,t):window.WEBLOG_ALLOW_URL_HASH_WUID,t));var e}e.services[n]={enabled:!0,loaded:function(){return"string"==typeof window.WEBLOG_API_DEFAULT&&"object"==typeof e.store&&window.WEBLOG_API_DEFAULT.length},getId:f,getSessionId:d,identify:function(e,t,o){return"to-do"},track:function(e,t,o,n){var r=function(e,t){var o={};o.event=e,o.moment=(new Date).toISOString(),o.platform=window.WEBLOG_PLATFORM,o.log_ver=window.WEBLOG_VERSION,o.uuid=f(),o.session_id=d(),o.user_agent=w.userAgent,o.browser=w.browser,o.storage=a.method,o.protocol=window.location.protocol,o.host=window.location.host,o.pathname=window.location.pathname,o.search=window.location.search,o.hash=window.location.hash,o.referrer=document.referrer.substr(0,250),o.ref_host=u(o.referrer).host,function(e){var t=a.session.getItem("_sessionRef"),o=a.session.getItem("_sessionRefHost");t||(t=document.referrer.substr(0,250),o=u(t).host,t||(o=t="Direct"),a.session.setItem("_sessionRef",t),a.session.setItem("_sessionRefHost",o));e.session_referrer=t,e.session_ref_host=o}(o);var n,r=a.getItem("fcm_token");r&&(o.fcm_token=r);if("object"==typeof window.wDataLayer)for(n in window.wDataLayer)o[n]=c(window.wDataLayer[n]);if(t&&"object"==typeof t)for(n in t)o[n]=c(t[n]);else o.label=c(t);return o}(e,t);return o="function"==typeof o?(n=o,window.WEBLOG_API_DEFAULT):o||window.WEBLOG_API_DEFAULT,s.postJson(o,r,n),r},trackJSErr:function(e,t,o,n,r){var i={event:"JSErr"};i.moment=(new Date).toISOString(),i.uuid=f(),i.session_id=d(),i.user_agent=w.userAgent,i.browser=w.browser,i.storage=a.method,i.protocol=window.location.protocol,i.host=window.location.host,i.pathname=window.location.pathname,i.search=window.location.search,i.hash=window.location.hash,i.referrer=document.referrer.substr(0,250),i.message=e||null,i.source=t||null,i.lineno=o||null,i.colno=n||null,i.error=(r||"").toString(),s.postJson("//logsbin.dantri.com.vn/rec/dantri_com_vn_error",i)}},e._track=e.services[n].track}(window.webLog),window.webLog=window.webLog||{},window.webLog.services=window.webLog.services||{},window.webLog,window.webLog=window.webLog||{},function(s){var o=[];s.track=function(t,r,i){var a="function"==typeof i;try{window.webLog.preTracking&&window.webLog.preTracking[window.WEBLOG_PLATFORM][t]()}catch(e){}(function(){if(o.length)return o;for(var e in s.services)o.push(e);return o})().forEach(function(o){var n,e=s.services[o];e&&e.enabled&&e.loaded()?n=e.track(t,r,function(e,t){a&&i(o,n,e,t)}):a&&i(o,null,null,null)})}}(window.webLog),window.WEBLOG_API_DEFAULT="//logsbin.dantri.com.vn/rec/dantri_com_vn",window.WEBLOG_ALLOW_URL_HASH_WUID=!1,window.WEBLOG_PLATFORM=window.WEBLOG_PLATFORM||"web",window.COOKIE_DOMAIN=window.COOKIE_DOMAIN||"dantri.com.vn",window.WEBLOG_VERSION="0.0.98",window.WEBLOG_TIMESTAMP=Date.now(),function(t){function e(){var e=(document.title||"").substr(0,250);t.track("Pageview",{title:e},t.tracked)}0===window.DONGLOGS_WAITDOCREADY?e():t.ondocReady(e)}(window.webLog);/**2020-07-24T05:02:50.662Z**/
+    </script>
+
+    
+
+
+<meta name="robots" content="index,follow,all"> 
+<title>Thông tin mới nhất về đại dịch COVID-19 - SARS-CoV-2 Việt Nam và thế giới | Báo Dân trí</title>
+<meta name="description" content="Tin tức mới nhất về đại dịch COVID-19 - SARS-CoV-2 (viêm đường hô hấp cấp) ở Việt Nam và thế giới. Biểu đồ thống kê dịch bệnh. Các triệu chứng thường gặp nhất, cách phòng ngừa, phương pháp điều trị Virus corona, Thông tin cập nhật về vắc-xin (vaccine), Đường dây nóng các trung tâm hỗ trợ y" />
+<meta name="keywords" content="dantri,báo điện tử dantri,thời tiết,tin tức,tin nhanh,thể thao,dự báo thời tiết,tin the thao,thể thao 24h,giá vàng hôm nay,tin the gioi,đọc báo,tin moi,giá vàng,thời tiết hôm nay,tin tức online,bóng đá việt nam,pháp luật,dự báo thời tiết hôm nay,tin tức 24 giờ,tin nong,thời tiết hà nội,lịch thi đấu bóng đá hôm nay,thời sự,an ninh,tin tức trong ngày" />
+<meta name="title" content="Thông tin mới nhất về đại dịch COVID-19 - SARS-CoV-2 Việt Nam và thế giới" />
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="dantri.com.vn" />
+
+<meta name="copyright" content="dantri.com.vn" />
+<meta name="author" content="dantri.com.vn" />
+
+
+<!-- Schema.org markup for Google+ -->
+<meta name="google-site-verification" content="W60o5FIiNTC4qM0e14lVCrmQOH7MDm2jy50E3fvvTHs">
+<meta itemprop="name" content="Thông tin mới nhất về đại dịch COVID-19 - SARS-CoV-2 Việt Nam và thế giới">
+<meta itemprop="image" content="https://icdn.dantri.com.vn/zoom/1200_630/2020/12/01/yte-11597138203235-1606809169028.jpg">
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="article">
+<meta name="twitter:site" content="Báo điện tử Dân Trí">
+<meta name="twitter:title" content="Thông tin mới nhất về đại dịch COVID-19 - SARS-CoV-2 Việt Nam và thế giới">
+<meta name="twitter:description" content="Tin tức mới nhất về đại dịch COVID-19 - SARS-CoV-2 (viêm đường hô hấp cấp) ở Việt Nam và thế giới. Biểu đồ thống kê dịch bệnh. Các triệu chứng thường gặp nhất, cách phòng ngừa, phương pháp điều trị Virus corona, Thông tin cập nhật về vắc-xin (vaccine), Đường dây nóng các trung tâm hỗ trợ y">
+<meta name="twitter:creator" content="dantri.com.vn">
+<meta name="twitter:image" content="https://icdn.dantri.com.vn/zoom/1200_630/2020/12/01/yte-11597138203235-1606809169028.jpg">
+<!-- Open Graph data -->
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Báo điện tử Dân Trí" />
+<meta property="og:title" content="Thông tin mới nhất về đại dịch COVID-19 - SARS-CoV-2 Việt Nam và thế giới" />
+<meta property="og:url" content="https://dantri.com.vn/suc-khoe/dai-dich-covid-19.htm" />
+<meta property="og:image" content="http://icdn.dantri.com.vn/zoom/1200_630/2020/12/01/yte-11597138203235-1606809169028.jpg" />
+<meta property="og:description" content="Tin tức mới nhất về đại dịch COVID-19 - SARS-CoV-2 (viêm đường hô hấp cấp) ở Việt Nam và thế giới. Biểu đồ thống kê dịch bệnh. Các triệu chứng thường gặp nhất, cách phòng ngừa, phương pháp điều trị Virus corona, Thông tin cập nhật về vắc-xin (vaccine), Đường dây nóng các trung tâm hỗ trợ y" />
+<meta property="og:locale" content="vi_VN" />
+<meta name="format-detection" content="telephone=no">
+<meta name="thumbnail" content="https://icdn.dantri.com.vn/2020/12/01/yte-11597138203235-1606809169028.jpg" />    
+
+
+<meta property="og:image:secure_url" content="https://icdn.dantri.com.vn/zoom/1200_630/2020/12/01/yte-11597138203235-1606809169028.jpg" />
+
+
+<meta property="fb:app_id" content="164035690775918">
+
+<meta name="resource-type" content="Document">
+<meta name="distribution" content="Global">
+<meta property="fb:pages" content="345033318906366">
+<meta property="article:author" content="https://www.facebook.com/baodantridientu">
+<meta property="article:publisher" content="https://www.facebook.com/baodantridientu">
+<link href="/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="audience" content="General">
+    <meta http-equiv="content-language" content="vi" />
+    <meta name="revisit-after" content="1 days">
+        <link rel="canonical" href="https://dantri.com.vn/suc-khoe/dai-dich-covid-19.htm" />
+
+    
+  <link type="text/css" rel="stylesheet" href="https://cdnweb.dantri.com.vn/bundle/static/dantri.min.css?_=f5470267" data-href="/bundle/static/dantri.min.css?_=f5470267">
+      
+    
+    
+    
+
+        <link type="text/css" rel="stylesheet" href="https://cdnweb.dantri.com.vn/bundle/static/categoryv2.min.css?_=f5470267" data-href="/bundle/static/categoryv2.min.css?_=f5470267">
+        
+
+        <link type="text/css" rel="stylesheet" href="https://cdnweb.dantri.com.vn/bundle/static/corona.min.css?_=f5470267" data-href="/bundle/static/corona.min.css?_=f5470267">
+        
+  
+ 
+
+
+
+    
+    <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PM6G9ZN');</script>
+    <!-- End Google Tag Manager -->
+      <link href="https://amp.dantri.com.vn/suc-khoe/dai-dich-covid-19.htm" rel="amphtml"/>
+          <meta http-equiv="refresh" content="600">
+    
+
+</head>
+<body class="categoryv2  dtv2 page-specialized page-specialized--corona" data-isrc="categoryv2" xds-provider="xds-corona">
+
+
+
+
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM6G9ZN"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+
+<header class="dt-header">
+  
+
+    <div class="dt-header___content">
+      <div class="container">
+        <div class="dt-header__logo">
+          <a title="Báo điện tử Dân trí - Tin tức cập nhật liên tục 24/7" href="/">
+            <img src="https://cdnweb.dantri.com.vn/bundle/static/assets/logo_dantri.png?v=1201161442" alt="Báo điện tử Dân trí - Tin tức cập nhật liên tục 24/7">
+          </a>
+        </div>
+                    <div id="xds-2" ></div>
+
+        <form method="GET" action="/tim-kiem.htm" class="search-box">
+          <input id="js-search-input" type="text" class="form-control search-box__input" name="s" placeholder="Tìm kiếm tin tức" autocomplete="off">
+          <button class="btn search-box__btn" type="submit">
+            <i class="dt-icon icon-search"></i>
+          </button>
+        </form>
+        
+        
+      </div>
+    </div>
+    <nav class="site-menu">
+    <div class="container">
+        <ol class="site-menu__list list-unstyled">
+            <li class="home">
+                <a title="Trang chủ" href="/">
+                    <i class="dt-icon icon-home"></i>
+                </a>
+            </li>
+                            <li class="dropdown dropdown--hover">
+                    <h1 class="active">                    
+                    <a data-utm="Cate_DaiDichCovid19|MenuMain|1" data-cat-id="978" class="active" href="/suc-khoe/dai-dich-covid-19.htm">Đại dịch Covid-19</a>
+</h1>                                    </li>
+                <li class="dropdown dropdown--hover dropdown--right">
+                                        
+                    <a data-utm="Cate_DaiDichCovid19|MenuMain|2" data-cat-id="979" class="" href="/suc-khoe/dai-dich-covid-19/kien-thuc-dich-benh-covid-19.htm">Kiến thức dịch bệnh Covid-19</a>
+                                    </li>
+                    </ol>
+    </div>
+</nav>
+                <div class="dt-top-banner">
+                <div class="top-banner">
+                    <div class="container">
+                        <div class="top-banner__content">
+                            <div id="xds-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    
+
+</header>
+<main class="dt-main">
+
+            <div id="xds-90"></div>
+
+<div class="container clearfix  " data-custom-script="978">
+    <div class="page-header page-header--category">
+        <div class="d-flex">
+                <h1 class="page-header__title">
+                    <a title="Đại dịch Covid-19" href="/suc-khoe/dai-dich-covid-19.htm">
+                        Đại dịch Covid-19
+                    </a>
+                </h1>  
+                <div class="top-trending">
+        <span class="top-trending__label">Dòng sự kiện</span>
+        <ul class="top-trending__list list-unstyled">
+                <li>
+                    <a title="Ngộ độc pate Minh Chay" href="/event/ngo-doc-pate-minh-chay-3905.htm">Ngộ độc pate Minh Chay</a>
+                </li>
+        </ul>
+    </div>
+
+
+        </div>
+    </div>
+      <!-- highlight -->
+    <div class="dt-highlight clearfix">
+      <div class="col col--highlight-news clearfix">
+        
+    <div class="news-item news-item--left2right news-item--category-highlight">
+        
+
+
+<a  data-utm="Cate_DaiDichCovid19|Cover|1"
+ class="news-item__avatar"   href="/suc-khoe/bn-1347-da-di-uong-cafe-an-oc-hat-karaoke-tap-gym-tai-nhieu-dia-diem-20201201145412245.htm"
+  title="BN 1347 đã đi uống cafe, ăn ốc, hát karaoke, tập gym... tại nhiều địa điểm">
+  
+  
+                        
+                        <div class="dt-thumbnail dt-thumbnail--3x2">
+                            <img alt="BN 1347 đã đi uống cafe, ăn ốc, hát karaoke, tập gym... tại nhiều địa điểm" class=" no-img" lazy-src="https://icdn.dantri.com.vn/zoom/1020_680/2020/12/01/yte-11597138203235-1606809169028.jpg" src="https://icdn.dantri.com.vn/zoom/1020_680/filters:quality(0)/2020/12/01/yte-11597138203235-1606809169028.jpg">
+                        </div> 
+                        
+                         
+</a>
+
+
+          <div class="news-item__content">
+           
+
+            <h3 class='news-item__title'>
+                    
+
+
+<a  data-utm="Cate_DaiDichCovid19|Cover|1"
+  href="/suc-khoe/bn-1347-da-di-uong-cafe-an-oc-hat-karaoke-tap-gym-tai-nhieu-dia-diem-20201201145412245.htm"
+  title="BN 1347 đã đi uống cafe, ăn ốc, hát karaoke, tập gym... tại nhiều địa điểm">
+  
+  BN 1347 đã đi uống cafe, ăn ốc, hát karaoke, tập gym... tại nhiều địa điểm    
+</a>
+
+
+  
+           
+            </h3>
+            
+                                     <a data-utm="Cate_DaiDichCovid19|Cover|1" class="news-item__sapo" title="BN 1347 đã đi uống cafe, ăn ốc, hát karaoke, tập gym... tại nhiều địa điểm" href="/suc-khoe/bn-1347-da-di-uong-cafe-an-oc-hat-karaoke-tap-gym-tai-nhieu-dia-diem-20201201145412245.htm">(Dân trí)&nbsp;- Ít nhất 6 địa điểm có nguy cơ ở mức cảnh báo phát tán mầm bệnh SARS-CoV-2 đã được cơ quan chức năng khoanh vùng trong quá trình điều tra dịch tễ, cộng đồng cần biết để chủ động bảo vệ sức khỏe.</a>
+                                             </div>
+    </div>
+
+        <div class="col col--highlight-top3">
+          <ul class="dt-list dt-list--top3">
+              <li>
+                
+    <div class="news-item news-item--normal">
+        
+
+
+<a  data-utm="Cate_DaiDichCovid19|Top3|1"
+ class="news-item__avatar"   href="/suc-khoe/vi-sao-tiep-vien-hang-khong-mac-covid-19-khong-cach-ly-tap-trung-14-ngay-20201201123148781.htm"
+  title="Vì sao tiếp viên hàng không mắc Covid-19 không cách ly tập trung 14 ngày?">
+  
+  
+                        
+                        <div class="dt-thumbnail dt-thumbnail--3x2">
+                            <img alt="Vì sao tiếp viên hàng không mắc Covid-19 không cách ly tập trung 14 ngày?" class=" no-img" lazy-src="https://icdn.dantri.com.vn/zoom/468_310/2020/12/01/11588719446756-1606800283839.jpg" src="https://icdn.dantri.com.vn/zoom/468_310/filters:quality(0)/2020/12/01/11588719446756-1606800283839.jpg">
+                        </div> 
+                        
+                         
+</a>
+
+
+          <div class="news-item__content">
+           
+
+            <h3 class='news-item__title'>
+                    
+
+
+<a  data-utm="Cate_DaiDichCovid19|Top3|1"
+  href="/suc-khoe/vi-sao-tiep-vien-hang-khong-mac-covid-19-khong-cach-ly-tap-trung-14-ngay-20201201123148781.htm"
+  title="Vì sao tiếp viên hàng không mắc Covid-19 không cách ly tập trung 14 ngày?">
+  
+  Vì sao tiếp viên hàng không mắc Covid-19 không cách ly tập trung 14 ngày?    
+</a>
+
+
+  
+           
+            </h3>
+            
+                                                                  </div>
+    </div>
+
+              </li>
+              <li>
+                
+    <div class="news-item news-item--normal">
+        
+
+
+<a  data-utm="Cate_DaiDichCovid19|Top3|2"
+ class="news-item__avatar"   href="/suc-khoe/mot-phu-nu-ve-tu-trung-quoc-khong-cach-ly-ve-que-bang-xe-khach-20201201121358030.htm"
+  title="Một phụ nữ về từ Trung Quốc không cách ly, về quê bằng xe khách">
+  
+  
+                        
+                        <div class="dt-thumbnail dt-thumbnail--3x2">
+                            <img alt="Một phụ nữ về từ Trung Quốc không cách ly, về quê bằng xe khách" class=" no-img" lazy-src="https://icdn.dantri.com.vn/zoom/468_310/2020/12/01/khu-vuc-cach-ly-dac-biet-1606799495981.jpg" src="https://icdn.dantri.com.vn/zoom/468_310/filters:quality(0)/2020/12/01/khu-vuc-cach-ly-dac-biet-1606799495981.jpg">
+                        </div> 
+                        
+                         
+</a>
+
+
+          <div class="news-item__content">
+           
+
+            <h3 class='news-item__title'>
+                    
+
+
+<a  data-utm="Cate_DaiDichCovid19|Top3|2"
+  href="/suc-khoe/mot-phu-nu-ve-tu-trung-quoc-khong-cach-ly-ve-que-bang-xe-khach-20201201121358030.htm"
+  title="Một phụ nữ về từ Trung Quốc không cách ly, về quê bằng xe khách">
+  
+  Một phụ nữ về từ Trung Quốc không cách ly, về quê bằng xe khách    
+</a>
+
+
+  
+           
+            </h3>
+            
+                                                                  </div>
+    </div>
+
+              </li>
+              <li>
+                
+    <div class="news-item news-item--normal">
+        
+
+
+<a  data-utm="Cate_DaiDichCovid19|Top3|3"
+ class="news-item__avatar"   href="/suc-khoe/vi-sao-nam-tiep-vien-hang-khong-xet-nghiem-lan-3-moi-duong-tinh-sars-co-v-2-20201201102852931.htm"
+  title="Vì sao nam tiếp viên hàng không xét nghiệm lần 3 mới dương tính SARS-CoV-2?">
+  
+  
+                        
+                        <div class="dt-thumbnail dt-thumbnail--3x2">
+                            <img alt="Vì sao nam tiếp viên hàng không xét nghiệm lần 3 mới dương tính SARS-CoV-2?" class=" no-img" lazy-src="https://icdn.dantri.com.vn/zoom/468_310/2020/12/01/202008191629011597830121498-1606793175907.png" src="https://icdn.dantri.com.vn/zoom/468_310/filters:quality(0)/2020/12/01/202008191629011597830121498-1606793175907.png">
+                        </div> 
+                        
+                         
+</a>
+
+
+          <div class="news-item__content">
+           
+
+            <h3 class='news-item__title'>
+                    
+
+
+<a  data-utm="Cate_DaiDichCovid19|Top3|3"
+  href="/suc-khoe/vi-sao-nam-tiep-vien-hang-khong-xet-nghiem-lan-3-moi-duong-tinh-sars-co-v-2-20201201102852931.htm"
+  title="Vì sao nam tiếp viên hàng không xét nghiệm lần 3 mới dương tính SARS-CoV-2?">
+  
+  Vì sao nam tiếp viên hàng không xét nghiệm lần 3 mới dương tính SARS-CoV-2?    
+</a>
+
+
+  
+           
+            </h3>
+            
+                                                                  </div>
+    </div>
+
+              </li>
+          </ul>
+        </div>
+        
+      </div>
+      <!-- top 5 article phía phải -->
+            <div id="xds-100" class="col col--highlight-ads" cat-id="">
+    
+            </div>
+      
+    </div>
+    <div class="dt-divider"></div>
+  
+
+
+  <div class="clearfix  dt-main-category" sub-cat="0" >
+    <div class="col col--main" >
+      <div id="primary-category-col"></div>
+      <ul class="dt-list dt-list--lg">
+                  <li>
+            
+    <div class="news-item news-item--timeline news-item--left2right">
+        
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|1"
+ class="news-item__avatar"   href="/the-gioi/chuyen-gia-ong-kim-jongun-co-the-da-tiem-vac-xin-covid-19-cua-trung-quoc-20201201110009333.htm"
+  title="Chuyên gia: Ông Kim Jong-un có thể đã tiêm vắc xin Covid-19 của Trung Quốc">
+  
+  
+                        
+                        <div class="dt-thumbnail dt-thumbnail--3x2">
+                            <img alt="Chuyên gia: Ông Kim Jong-un có thể đã tiêm vắc xin Covid-19 của Trung Quốc" class=" no-img" lazy-src="https://icdn.dantri.com.vn/zoom/480_320/2020/12/01/kim-jong-un-1606795120725.jpg" src="https://icdn.dantri.com.vn/zoom/480_320/filters:quality(0)/2020/12/01/kim-jong-un-1606795120725.jpg">
+                        </div> 
+                        
+                         
+</a>
+
+
+          <div class="news-item__content">
+           
+
+            <h3 class='news-item__title'>
+                    
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|1"
+  href="/the-gioi/chuyen-gia-ong-kim-jongun-co-the-da-tiem-vac-xin-covid-19-cua-trung-quoc-20201201110009333.htm"
+  title="Chuyên gia: Ông Kim Jong-un có thể đã tiêm vắc xin Covid-19 của Trung Quốc">
+  
+  Chuyên gia: Ông Kim Jong-un có thể đã tiêm vắc xin Covid-19 của Trung Quốc    
+</a>
+
+
+  
+           
+            </h3>
+            
+                                     <a data-utm="Cate_DaiDichCovid19|MainList|1" class="news-item__sapo" title="Chuyên gia: Ông Kim Jong-un có thể đã tiêm vắc xin Covid-19 của Trung Quốc" href="/the-gioi/chuyen-gia-ong-kim-jongun-co-the-da-tiem-vac-xin-covid-19-cua-trung-quoc-20201201110009333.htm">(Dân trí)&nbsp;- Một chuyên gia phân tích của Mỹ cho rằng, nhà lãnh đạo Triều Tiên Kim Jong-un và một số quan chức cấp cao của nước này có thể đã tiêm vắc xin ngừa Covid-19 thử nghiệm của Trung Quốc.</a>
+                                         <div class="news-item__meta">
+                                            <span class="news-item__time">5 giờ trước</span>
+                </div>
+                    </div>
+    </div>
+
+          </li>
+          <li>
+            
+    <div class="news-item news-item--timeline news-item--left2right">
+        
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|2"
+ class="news-item__avatar"   href="/suc-khoe/da-nang-cach-ly-mot-truong-hop-tiep-xuc-gan-voi-ca-mac-covid-19-o-tphcm-20201201102949991.htm"
+  title="Đà Nẵng cách ly một trường hợp tiếp xúc gần với ca mắc Covid-19 ở TPHCM">
+  
+  
+                        
+                        <div class="dt-thumbnail dt-thumbnail--3x2">
+                            <img alt="Đà Nẵng cách ly một trường hợp tiếp xúc gần với ca mắc Covid-19 ở TPHCM" class=" no-img" lazy-src="https://icdn.dantri.com.vn/zoom/480_320/2020/12/01/cach-ly-y-te-1606793339767.jpg" src="https://icdn.dantri.com.vn/zoom/480_320/filters:quality(0)/2020/12/01/cach-ly-y-te-1606793339767.jpg">
+                        </div> 
+                        
+                         
+</a>
+
+
+          <div class="news-item__content">
+           
+
+            <h3 class='news-item__title'>
+                    
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|2"
+  href="/suc-khoe/da-nang-cach-ly-mot-truong-hop-tiep-xuc-gan-voi-ca-mac-covid-19-o-tphcm-20201201102949991.htm"
+  title="Đà Nẵng cách ly một trường hợp tiếp xúc gần với ca mắc Covid-19 ở TPHCM">
+  
+  Đà Nẵng cách ly một trường hợp tiếp xúc gần với ca mắc Covid-19 ở TPHCM    
+</a>
+
+
+  
+           
+            </h3>
+            
+                                     <a data-utm="Cate_DaiDichCovid19|MainList|2" class="news-item__sapo" title="Đà Nẵng cách ly một trường hợp tiếp xúc gần với ca mắc Covid-19 ở TPHCM" href="/suc-khoe/da-nang-cach-ly-mot-truong-hop-tiep-xuc-gan-voi-ca-mac-covid-19-o-tphcm-20201201102949991.htm">(Dân trí)&nbsp;- Đà Nẵng đã tiến hành cách ly một trường hợp thuộc F1 của bệnh nhân 1347 ở TPHCM vừa được Bộ Y tế công bố tối qua 30/11.</a>
+                                         <div class="news-item__meta">
+                                            <span class="news-item__time">5 giờ trước</span>
+                </div>
+                    </div>
+    </div>
+
+          </li>
+          <li>
+            
+    <div class="news-item news-item--timeline news-item--left2right">
+        
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|3"
+ class="news-item__avatar"   href="/suc-khoe/phong-toa-truy-vet-nhung-noi-benh-nhan-covid-19-tung-den-20201201092027164.htm"
+  title="Phong tỏa, truy vết những nơi bệnh nhân Covid-19 từng đến">
+  
+  
+                        
+                        <div class="dt-thumbnail dt-thumbnail--3x2">
+                            <img alt="Phong tỏa, truy vết những nơi bệnh nhân Covid-19 từng đến" class=" no-img" lazy-src="https://icdn.dantri.com.vn/zoom/480_320/2020/09/27/hv-1601210005276.jpg" src="https://icdn.dantri.com.vn/zoom/480_320/filters:quality(0)/2020/09/27/hv-1601210005276.jpg">
+                        </div> 
+                        
+                         
+</a>
+
+
+          <div class="news-item__content">
+           
+
+            <h3 class='news-item__title'>
+                    
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|3"
+  href="/suc-khoe/phong-toa-truy-vet-nhung-noi-benh-nhan-covid-19-tung-den-20201201092027164.htm"
+  title="Phong tỏa, truy vết những nơi bệnh nhân Covid-19 từng đến">
+  
+  Phong tỏa, truy vết những nơi bệnh nhân Covid-19 từng đến    
+</a>
+
+
+  
+           
+            </h3>
+            
+                                     <a data-utm="Cate_DaiDichCovid19|MainList|3" class="news-item__sapo" title="Phong tỏa, truy vết những nơi bệnh nhân Covid-19 từng đến" href="/suc-khoe/phong-toa-truy-vet-nhung-noi-benh-nhan-covid-19-tung-den-20201201092027164.htm">(Dân trí)&nbsp;- Lệnh phong tỏa đang được siết chặt tại những địa điểm mà bệnh nhân nhiễm SARS-CoV-2 từ nam tiếp viên hàng không đã đến. Đến nay, đã xác định được 192 người ngoài cộng đồng tiếp xúc với ca bệnh.</a>
+                                         <div class="news-item__meta">
+                                            <span class="news-item__time">7 giờ trước</span>
+                </div>
+                    </div>
+    </div>
+
+          </li>
+          <li>
+            
+    <div class="news-item news-item--timeline news-item--left2right">
+        
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|4"
+ class="news-item__avatar"   href="/the-gioi/cum-covid-19-tang-len-18-truong-hop-campuchia-cap-tap-kiem-soat-dich-20201201084645877.htm"
+  title="Cụm Covid-19 tăng lên 18 trường hợp, Campuchia cấp tập kiểm soát dịch">
+  
+  
+                        
+                        <div class="dt-thumbnail dt-thumbnail--3x2">
+                            <img alt="Cụm Covid-19 tăng lên 18 trường hợp, Campuchia cấp tập kiểm soát dịch" class=" no-img" lazy-src="https://icdn.dantri.com.vn/zoom/480_320/2020/12/01/13304-1606786925262.jpg" src="https://icdn.dantri.com.vn/zoom/480_320/filters:quality(0)/2020/12/01/13304-1606786925262.jpg">
+                        </div> 
+                        
+                         
+</a>
+
+
+          <div class="news-item__content">
+           
+
+            <h3 class='news-item__title'>
+                    
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|4"
+  href="/the-gioi/cum-covid-19-tang-len-18-truong-hop-campuchia-cap-tap-kiem-soat-dich-20201201084645877.htm"
+  title="Cụm Covid-19 tăng lên 18 trường hợp, Campuchia cấp tập kiểm soát dịch">
+  
+  Cụm Covid-19 tăng lên 18 trường hợp, Campuchia cấp tập kiểm soát dịch    
+</a>
+
+
+  
+           
+            </h3>
+            
+                                     <a data-utm="Cate_DaiDichCovid19|MainList|4" class="news-item__sapo" title="Cụm Covid-19 tăng lên 18 trường hợp, Campuchia cấp tập kiểm soát dịch" href="/the-gioi/cum-covid-19-tang-len-18-truong-hop-campuchia-cap-tap-kiem-soat-dich-20201201084645877.htm">(Dân trí)&nbsp;- Campuchia đang huy động lực lượng truy vết mầm bệnh và thực hiện các biện pháp cần thiết để ngăn chặn cụm dịch Covid-19 siêu lây nhiễm trong cộng đồng đầu tiên ở nước này lây lan.</a>
+                                         <div class="news-item__meta">
+                                            <span class="news-item__time">7 giờ trước</span>
+                </div>
+                    </div>
+    </div>
+
+          </li>
+          <li>
+            
+    <div class="news-item news-item--timeline news-item--left2right">
+        
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|5"
+ class="news-item__avatar"   href="/the-gioi/nguoi-my-co-the-duoc-tiem-vac-xin-covid-19-truoc-giang-sinh-20201130230144776.htm"
+  title="Người Mỹ có thể được tiêm vắc xin Covid-19 trước Giáng sinh">
+  
+  
+                        
+                        <div class="dt-thumbnail dt-thumbnail--3x2">
+                            <img alt="Người Mỹ có thể được tiêm vắc xin Covid-19 trước Giáng sinh" class=" no-img" lazy-src="https://icdn.dantri.com.vn/zoom/480_320/2020/11/30/v-1606751907172.jpg" src="https://icdn.dantri.com.vn/zoom/480_320/filters:quality(0)/2020/11/30/v-1606751907172.jpg">
+                        </div> 
+                        
+                         
+</a>
+
+
+          <div class="news-item__content">
+           
+
+            <h3 class='news-item__title'>
+                    
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|5"
+  href="/the-gioi/nguoi-my-co-the-duoc-tiem-vac-xin-covid-19-truoc-giang-sinh-20201130230144776.htm"
+  title="Người Mỹ có thể được tiêm vắc xin Covid-19 trước Giáng sinh">
+  
+  Người Mỹ có thể được tiêm vắc xin Covid-19 trước Giáng sinh    
+</a>
+
+
+  
+           
+            </h3>
+            
+                                     <a data-utm="Cate_DaiDichCovid19|MainList|5" class="news-item__sapo" title="Người Mỹ có thể được tiêm vắc xin Covid-19 trước Giáng sinh" href="/the-gioi/nguoi-my-co-the-duoc-tiem-vac-xin-covid-19-truoc-giang-sinh-20201130230144776.htm">(Dân trí)&nbsp;- Hai vắc xin phòng Covid-19 đầu tiên có thể có thể được phân phối đến người Mỹ ngay trước Giáng sinh năm nay, Bộ trưởng Y tế Mỹ Alex Azar cho biết, trong bối cảnh số ca bệnh không ngừng tăng.</a>
+                                         <div class="news-item__meta">
+                                            <span class="news-item__time">17 giờ trước</span>
+                </div>
+                    </div>
+    </div>
+
+          </li>
+            <li>
+                        <div id="xds-103"></div>
+
+            </li>
+          <li>
+            
+    <div class="news-item news-item--timeline news-item--left2right">
+        
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|6"
+ class="news-item__avatar"   href="/suc-khoe/tiep-nhan-cach-ly-237-sinh-vien-lao-tro-lai-hoc-tap-20201130203024626.htm"
+  title="Tiếp nhận, cách ly 237 sinh viên Lào trở lại học tập">
+  
+  
+                        
+                        <div class="dt-thumbnail dt-thumbnail--3x2">
+                            <img alt="Tiếp nhận, cách ly 237 sinh viên Lào trở lại học tập" class=" no-img" lazy-src="https://icdn.dantri.com.vn/zoom/480_320/2020/11/30/anh-1-1606742930581.jpg" src="https://icdn.dantri.com.vn/zoom/480_320/filters:quality(0)/2020/11/30/anh-1-1606742930581.jpg">
+                        </div> 
+                        
+                         
+</a>
+
+
+          <div class="news-item__content">
+           
+
+            <h3 class='news-item__title'>
+                    
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|6"
+  href="/suc-khoe/tiep-nhan-cach-ly-237-sinh-vien-lao-tro-lai-hoc-tap-20201130203024626.htm"
+  title="Tiếp nhận, cách ly 237 sinh viên Lào trở lại học tập">
+  
+  Tiếp nhận, cách ly 237 sinh viên Lào trở lại học tập    
+</a>
+
+
+  
+           
+            </h3>
+            
+                                     <a data-utm="Cate_DaiDichCovid19|MainList|6" class="news-item__sapo" title="Tiếp nhận, cách ly 237 sinh viên Lào trở lại học tập" href="/suc-khoe/tiep-nhan-cach-ly-237-sinh-vien-lao-tro-lai-hoc-tap-20201130203024626.htm">(Dân trí)&nbsp;- Ngày 30/11, Hà Tĩnh đã tiếp nhận và cách ly 237 sinh viên Lào trở lại học tập phòng Covid-19.</a>
+                                         <div class="news-item__meta">
+                                            <span class="news-item__time">18 giờ trước</span>
+                </div>
+                    </div>
+    </div>
+
+          </li>
+          <li>
+            
+    <div class="news-item news-item--timeline news-item--left2right">
+        
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|7"
+ class="news-item__avatar"   href="/suc-khoe/bo-y-te-ra-cong-dien-khan-yeu-cau-giam-sat-chat-nguoi-nhap-canh-20201130203120110.htm"
+  title="Bộ Y tế ra công điện khẩn yêu cầu giám sát chặt người nhập cảnh">
+  
+  
+                        
+                        <div class="dt-thumbnail dt-thumbnail--3x2">
+                            <img alt="Bộ Y tế ra công điện khẩn yêu cầu giám sát chặt người nhập cảnh" class=" no-img" lazy-src="https://icdn.dantri.com.vn/zoom/480_320/2020/08/10/cachly-1-1597060219487.jpeg" src="https://icdn.dantri.com.vn/zoom/480_320/filters:quality(0)/2020/08/10/cachly-1-1597060219487.jpeg">
+                        </div> 
+                        
+                         
+</a>
+
+
+          <div class="news-item__content">
+           
+
+            <h3 class='news-item__title'>
+                    
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|7"
+  href="/suc-khoe/bo-y-te-ra-cong-dien-khan-yeu-cau-giam-sat-chat-nguoi-nhap-canh-20201130203120110.htm"
+  title="Bộ Y tế ra công điện khẩn yêu cầu giám sát chặt người nhập cảnh">
+  
+  Bộ Y tế ra công điện khẩn yêu cầu giám sát chặt người nhập cảnh    
+</a>
+
+
+  
+           
+            </h3>
+            
+                                     <a data-utm="Cate_DaiDichCovid19|MainList|7" class="news-item__sapo" title="Bộ Y tế ra công điện khẩn yêu cầu giám sát chặt người nhập cảnh" href="/suc-khoe/bo-y-te-ra-cong-dien-khan-yeu-cau-giam-sat-chat-nguoi-nhap-canh-20201130203120110.htm">(Dân trí)&nbsp;- Bộ Y tế yêu cầu các Bộ, UBND các tỉnh, thành tiếp tục quán triệt tinh thần chống dịch với mức độ cảnh giác cao nhất, không được chủ quan, lơ là.</a>
+                                         <div class="news-item__meta">
+                                            <span class="news-item__time">20 giờ trước</span>
+                </div>
+                    </div>
+    </div>
+
+          </li>
+          <li>
+            
+    <div class="news-item news-item--timeline news-item--left2right">
+        
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|8"
+ class="news-item__avatar"   href="/suc-khoe/ca-covid-19-tai-tp-hcm-lay-nhiem-tu-nguoi-cach-ly-20201130175048868.htm"
+  title="Ca Covid-19 tại TP HCM lây nhiễm từ người cách ly">
+  
+  
+                        
+                        <div class="dt-thumbnail dt-thumbnail--3x2">
+                            <img alt="Ca Covid-19 tại TP HCM lây nhiễm từ người cách ly" class=" no-img" lazy-src="https://icdn.dantri.com.vn/zoom/480_320/2020/09/06/xetnghiempcrcaugiaysontung-14-1599346706457.jpg" src="https://icdn.dantri.com.vn/zoom/480_320/filters:quality(0)/2020/09/06/xetnghiempcrcaugiaysontung-14-1599346706457.jpg">
+                        </div> 
+                        
+                         
+</a>
+
+
+          <div class="news-item__content">
+           
+
+            <h3 class='news-item__title'>
+                    
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|8"
+  href="/suc-khoe/ca-covid-19-tai-tp-hcm-lay-nhiem-tu-nguoi-cach-ly-20201130175048868.htm"
+  title="Ca Covid-19 tại TP HCM lây nhiễm từ người cách ly">
+  
+  Ca Covid-19 tại TP HCM lây nhiễm từ người cách ly    
+</a>
+
+
+  
+           
+            </h3>
+            
+                                     <a data-utm="Cate_DaiDichCovid19|MainList|8" class="news-item__sapo" title="Ca Covid-19 tại TP HCM lây nhiễm từ người cách ly" href="/suc-khoe/ca-covid-19-tai-tp-hcm-lay-nhiem-tu-nguoi-cach-ly-20201130175048868.htm">(Dân trí)&nbsp;- Tối 30/11, Bộ Y tế thông báo khẩn về trường hợp lây nhiễm từ người cách ly. Đây là bệnh nhân thứ 1347 có liên quan trực tiếp đến BN 1342 được công bố trước đó.</a>
+                                         <div class="news-item__meta">
+                                            <span class="news-item__time">21 giờ trước</span>
+                </div>
+                    </div>
+    </div>
+
+          </li>
+          <li>
+            
+    <div class="news-item news-item--timeline news-item--left2right">
+        
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|9"
+ class="news-item__avatar"   href="/suc-khoe/toi-3011-viet-nam-them-3-ca-mac-covid-19-20201130180730009.htm"
+  title="Tối 30/11, Việt Nam thêm 3 ca mắc Covid-19">
+  
+  
+                        
+                        <div class="dt-thumbnail dt-thumbnail--3x2">
+                            <img alt="Tối 30/11, Việt Nam thêm 3 ca mắc Covid-19" class=" no-img" lazy-src="https://icdn.dantri.com.vn/zoom/480_320/2020/09/15/xetnghiempcrstung-9-1600145026877.jpg" src="https://icdn.dantri.com.vn/zoom/480_320/filters:quality(0)/2020/09/15/xetnghiempcrstung-9-1600145026877.jpg">
+                        </div> 
+                        
+                         
+</a>
+
+
+          <div class="news-item__content">
+           
+
+            <h3 class='news-item__title'>
+                    
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|9"
+  href="/suc-khoe/toi-3011-viet-nam-them-3-ca-mac-covid-19-20201130180730009.htm"
+  title="Tối 30/11, Việt Nam thêm 3 ca mắc Covid-19">
+  
+  Tối 30/11, Việt Nam thêm 3 ca mắc Covid-19    
+</a>
+
+
+  
+           
+            </h3>
+            
+                                     <a data-utm="Cate_DaiDichCovid19|MainList|9" class="news-item__sapo" title="Tối 30/11, Việt Nam thêm 3 ca mắc Covid-19" href="/suc-khoe/toi-3011-viet-nam-them-3-ca-mac-covid-19-20201130180730009.htm">(Dân trí)&nbsp;- Bộ Y tế thông tin đây đều là 3 ca nhập cảnh, là người Việt trở về từ Nhật Bản, Mỹ. Như vậy, đến nay nước ta có 1.346 bệnh nhân, 35 người tử vong.</a>
+                                         <div class="news-item__meta">
+                                            <span class="news-item__time">22 giờ trước</span>
+                </div>
+                    </div>
+    </div>
+
+          </li>
+                <li>
+                                <div id="xds-104"></div>
+
+                </li>
+          <li>
+            
+    <div class="news-item news-item--timeline news-item--left2right news-item--large">
+        
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|10"
+ class="news-item__avatar"   href="/suc-khoe/xuat-hien-ca-nghi-mac-covid-19-tp-hcm-khan-truong-khoanh-vung-dich-20201130170807792.htm"
+  title="Xuất hiện ca nghi mắc Covid-19, TP HCM khẩn trương khoanh vùng dịch">
+  
+  
+                        
+                        <div class="dt-thumbnail dt-thumbnail--3x2">
+                            <img alt="Xuất hiện ca nghi mắc Covid-19, TP HCM khẩn trương khoanh vùng dịch" class=" no-img" lazy-src="https://icdn.dantri.com.vn/zoom/920_612/2020/10/28/covid-19-1603889714949.jpeg" src="https://icdn.dantri.com.vn/zoom/920_612/filters:quality(0)/2020/10/28/covid-19-1603889714949.jpeg">
+                        </div> 
+                        
+                         
+</a>
+
+
+          <div class="news-item__content">
+           
+
+            <h3 class='news-item__title'>
+                    
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|10"
+  href="/suc-khoe/xuat-hien-ca-nghi-mac-covid-19-tp-hcm-khan-truong-khoanh-vung-dich-20201130170807792.htm"
+  title="Xuất hiện ca nghi mắc Covid-19, TP HCM khẩn trương khoanh vùng dịch">
+  
+  Xuất hiện ca nghi mắc Covid-19, TP HCM khẩn trương khoanh vùng dịch    
+</a>
+
+
+  
+           
+            </h3>
+            
+                                     <a data-utm="Cate_DaiDichCovid19|MainList|10" class="news-item__sapo" title="Xuất hiện ca nghi mắc Covid-19, TP HCM khẩn trương khoanh vùng dịch" href="/suc-khoe/xuat-hien-ca-nghi-mac-covid-19-tp-hcm-khan-truong-khoanh-vung-dich-20201130170807792.htm">(Dân trí)&nbsp;- Một nữ bệnh nhân tại TPHCM có xét nghiệm nghi ngờ dương tính với SARS-CoV-2, cơ quan chức năng đang khẩn trương khoanh vùng xử lý dịch. Bước đầu xác định nhiều ca tiếp xúc với trường hợp nghi ngờ này.</a>
+                                         <div class="news-item__meta">
+                                            <span class="news-item__time">23 giờ trước</span>
+                </div>
+                    </div>
+    </div>
+
+          </li>
+          <li>
+            
+    <div class="news-item news-item--timeline news-item--left2right">
+        
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|11"
+ class="news-item__avatar"   href="/suc-khoe/benh-nhan-tai-duong-tinh-voi-sars-co-v-2-cho-ket-qua-am-tinh-lan-1-20201130150403839.htm"
+  title="Bệnh nhân tái dương tính với SARS-CoV-2 cho kết quả âm tính lần 1">
+  
+  
+                        
+                        <div class="dt-thumbnail dt-thumbnail--3x2">
+                            <img alt="Bệnh nhân tái dương tính với SARS-CoV-2 cho kết quả âm tính lần 1" class=" no-img" lazy-src="https://icdn.dantri.com.vn/zoom/480_320/2020/11/30/khoa-truyen-nhiem-thai-binh-1606723317344.jpg" src="https://icdn.dantri.com.vn/zoom/480_320/filters:quality(0)/2020/11/30/khoa-truyen-nhiem-thai-binh-1606723317344.jpg">
+                        </div> 
+                        
+                         
+</a>
+
+
+          <div class="news-item__content">
+           
+
+            <h3 class='news-item__title'>
+                    
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|11"
+  href="/suc-khoe/benh-nhan-tai-duong-tinh-voi-sars-co-v-2-cho-ket-qua-am-tinh-lan-1-20201130150403839.htm"
+  title="Bệnh nhân tái dương tính với SARS-CoV-2 cho kết quả âm tính lần 1">
+  
+  Bệnh nhân tái dương tính với SARS-CoV-2 cho kết quả âm tính lần 1    
+</a>
+
+
+  
+           
+            </h3>
+            
+                                     <a data-utm="Cate_DaiDichCovid19|MainList|11" class="news-item__sapo" title="Bệnh nhân tái dương tính với SARS-CoV-2 cho kết quả âm tính lần 1" href="/suc-khoe/benh-nhan-tai-duong-tinh-voi-sars-co-v-2-cho-ket-qua-am-tinh-lan-1-20201130150403839.htm">(Dân trí)&nbsp;- Bệnh nhân 1138, ca bệnh tái dương tính với SARS-CoV-2 đã có kết quả xét nghiệm lần 1 âm tính. Các trường hợp F1 của bệnh nhân này, đều có kết quả xét nghiệm lần 2 âm tính.</a>
+                                         <div class="news-item__meta">
+                                            <span class="news-item__time">Thứ Hai 30/11/2020 - 15:53</span>
+                </div>
+                    </div>
+    </div>
+
+          </li>
+          <li>
+            
+    <div class="news-item news-item--timeline news-item--left2right">
+        
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|12"
+ class="news-item__avatar"   href="/suc-khoe/toi-2911-viet-nam-them-2-ca-mac-covid-19-20201129180526387.htm"
+  title="Tối 29/11, Việt Nam thêm 2 ca mắc Covid-19">
+  
+  
+                        
+                        <div class="dt-thumbnail dt-thumbnail--3x2">
+                            <img alt="Tối 29/11, Việt Nam thêm 2 ca mắc Covid-19" class=" no-img" lazy-src="https://icdn.dantri.com.vn/zoom/480_320/2020/08/08/xetnghiem-pcr-1596876282869.jpg" src="https://icdn.dantri.com.vn/zoom/480_320/filters:quality(0)/2020/08/08/xetnghiem-pcr-1596876282869.jpg">
+                        </div> 
+                        
+                         
+</a>
+
+
+          <div class="news-item__content">
+           
+
+            <h3 class='news-item__title'>
+                    
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|12"
+  href="/suc-khoe/toi-2911-viet-nam-them-2-ca-mac-covid-19-20201129180526387.htm"
+  title="Tối 29/11, Việt Nam thêm 2 ca mắc Covid-19">
+  
+  Tối 29/11, Việt Nam thêm 2 ca mắc Covid-19    
+</a>
+
+
+  
+           
+            </h3>
+            
+                                     <a data-utm="Cate_DaiDichCovid19|MainList|12" class="news-item__sapo" title="Tối 29/11, Việt Nam thêm 2 ca mắc Covid-19" href="/suc-khoe/toi-2911-viet-nam-them-2-ca-mac-covid-19-20201129180526387.htm">(Dân trí)&nbsp;- Bộ Y tế thông tin đến tối 29/11, Việt Nam có 1.343 bệnh nhân Covid-19, hai ca mắc mới trong ngày được cách ly ngay tại TP Hồ Chí Minh và Thanh Hóa.</a>
+                                         <div class="news-item__meta">
+                                            <span class="news-item__time">Chủ nhật 29/11/2020 - 18:05</span>
+                </div>
+                    </div>
+    </div>
+
+          </li>
+          <li>
+            
+    <div class="news-item news-item--timeline news-item--left2right">
+        
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|13"
+ class="news-item__avatar"   href="/the-gioi/gia-dinh-quan-chuc-thanh-cum-dich-lay-nhiem-covid-19-cong-dong-o-campuchia-20201129160010230.htm"
+  title="Gia đình quan chức thành cụm dịch lây nhiễm Covid-19 cộng đồng ở Campuchia">
+  
+  
+                        
+                        <div class="dt-thumbnail dt-thumbnail--3x2">
+                            <img alt="Gia đình quan chức thành cụm dịch lây nhiễm Covid-19 cộng đồng ở Campuchia" class=" no-img" lazy-src="https://icdn.dantri.com.vn/zoom/480_320/2020/11/29/sivchanna-0111331-1606640257538.jpg" src="https://icdn.dantri.com.vn/zoom/480_320/filters:quality(0)/2020/11/29/sivchanna-0111331-1606640257538.jpg">
+                        </div> 
+                        
+                         
+</a>
+
+
+          <div class="news-item__content">
+           
+
+            <h3 class='news-item__title'>
+                    
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|13"
+  href="/the-gioi/gia-dinh-quan-chuc-thanh-cum-dich-lay-nhiem-covid-19-cong-dong-o-campuchia-20201129160010230.htm"
+  title="Gia đình quan chức thành cụm dịch lây nhiễm Covid-19 cộng đồng ở Campuchia">
+  
+  Gia đình quan chức thành cụm dịch lây nhiễm Covid-19 cộng đồng ở Campuchia    
+</a>
+
+
+  
+           
+            </h3>
+            
+                                     <a data-utm="Cate_DaiDichCovid19|MainList|13" class="news-item__sapo" title="Gia đình quan chức thành cụm dịch lây nhiễm Covid-19 cộng đồng ở Campuchia" href="/the-gioi/gia-dinh-quan-chuc-thanh-cum-dich-lay-nhiem-covid-19-cong-dong-o-campuchia-20201129160010230.htm">(Dân trí)&nbsp;- Campuchia liên tục phát hiện 6 ca Covid-19 được tin là đều thuộc gia đình của một quan chức. Đây được xem là cụm dịch lây nhiễm cộng đồng đầu tiên ở quốc gia Đông Nam Á.</a>
+                                         <div class="news-item__meta">
+                                            <span class="news-item__time">Chủ nhật 29/11/2020 - 16:31</span>
+                </div>
+                    </div>
+    </div>
+
+          </li>
+          <li>
+            
+    <div class="news-item news-item--timeline news-item--left2right">
+        
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|14"
+ class="news-item__avatar"   href="/the-gioi/campuchia-dong-cua-sieu-thi-lon-vi-nghi-ca-covid-19-lay-nhiem-cong-dong-20201129074702907.htm"
+  title="Campuchia đóng cửa siêu thị lớn vì nghi ca Covid-19 lây nhiễm cộng đồng">
+  
+  
+                        
+                        <div class="dt-thumbnail dt-thumbnail--3x2">
+                            <img alt="Campuchia đóng cửa siêu thị lớn vì nghi ca Covid-19 lây nhiễm cộng đồng" class=" no-img" lazy-src="https://icdn.dantri.com.vn/zoom/480_320/2020/11/29/cambodia-1606612773102.jpg" src="https://icdn.dantri.com.vn/zoom/480_320/filters:quality(0)/2020/11/29/cambodia-1606612773102.jpg">
+                        </div> 
+                        
+                         
+</a>
+
+
+          <div class="news-item__content">
+           
+
+            <h3 class='news-item__title'>
+                    
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|14"
+  href="/the-gioi/campuchia-dong-cua-sieu-thi-lon-vi-nghi-ca-covid-19-lay-nhiem-cong-dong-20201129074702907.htm"
+  title="Campuchia đóng cửa siêu thị lớn vì nghi ca Covid-19 lây nhiễm cộng đồng">
+  
+  Campuchia đóng cửa siêu thị lớn vì nghi ca Covid-19 lây nhiễm cộng đồng    
+</a>
+
+
+  
+           
+            </h3>
+            
+                                     <a data-utm="Cate_DaiDichCovid19|MainList|14" class="news-item__sapo" title="Campuchia đóng cửa siêu thị lớn vì nghi ca Covid-19 lây nhiễm cộng đồng" href="/the-gioi/campuchia-dong-cua-sieu-thi-lon-vi-nghi-ca-covid-19-lay-nhiem-cong-dong-20201129074702907.htm">(Dân trí)&nbsp;- Campuchia đã quyết định đóng cửa tạm thời một siêu thị lớn sau khi phát hiện một phụ nữ mắc Covid-19 tới đây ăn và mua sắm. Đây được xem là ca Covid-19 lây nhiễm cộng đồng đầu tiên ở Campuchia.</a>
+                                         <div class="news-item__meta">
+                                            <span class="news-item__time">Chủ nhật 29/11/2020 - 08:27</span>
+                </div>
+                    </div>
+    </div>
+
+          </li>
+                <li>
+                                <div id="xds-106"></div>
+
+                </li>
+          <li>
+            
+    <div class="news-item news-item--timeline news-item--left2right news-item--large">
+        
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|15"
+ class="news-item__avatar"   href="/suc-khoe/toi-2811-them-2-ca-mac-covid-19-viet-nam-co-1341-benh-nhan-20201128172205579.htm"
+  title="Tối 28/11, thêm 2 ca mắc Covid-19, Việt Nam có 1.341 bệnh nhân">
+  
+  
+                        
+                        <div class="dt-thumbnail dt-thumbnail--3x2">
+                            <img alt="Tối 28/11, thêm 2 ca mắc Covid-19, Việt Nam có 1.341 bệnh nhân" class=" no-img" lazy-src="https://icdn.dantri.com.vn/zoom/920_612/2020/09/19/laymauxetnghiem-101596862548545-1600470540544.jpg" src="https://icdn.dantri.com.vn/zoom/920_612/filters:quality(0)/2020/09/19/laymauxetnghiem-101596862548545-1600470540544.jpg">
+                        </div> 
+                        
+                         
+</a>
+
+
+          <div class="news-item__content">
+           
+
+            <h3 class='news-item__title'>
+                    
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|15"
+  href="/suc-khoe/toi-2811-them-2-ca-mac-covid-19-viet-nam-co-1341-benh-nhan-20201128172205579.htm"
+  title="Tối 28/11, thêm 2 ca mắc Covid-19, Việt Nam có 1.341 bệnh nhân">
+  
+  Tối 28/11, thêm 2 ca mắc Covid-19, Việt Nam có 1.341 bệnh nhân    
+</a>
+
+
+  
+           
+            </h3>
+            
+                                     <a data-utm="Cate_DaiDichCovid19|MainList|15" class="news-item__sapo" title="Tối 28/11, thêm 2 ca mắc Covid-19, Việt Nam có 1.341 bệnh nhân" href="/suc-khoe/toi-2811-them-2-ca-mac-covid-19-viet-nam-co-1341-benh-nhan-20201128172205579.htm">(Dân trí)&nbsp;- Bộ Y tế thông tin đây đều là ca nhập cảnh đươc cách ly ngay, trong đó một người bay về từ Nhật, một người từ Nga trở về.</a>
+                                         <div class="news-item__meta">
+                                            <span class="news-item__time">Thứ Bảy 28/11/2020 - 18:15</span>
+                </div>
+                    </div>
+    </div>
+
+          </li>
+          <li>
+            
+    <div class="news-item news-item--timeline news-item--left2right">
+        
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|16"
+ class="news-item__avatar"   href="/suc-khoe/mot-nguoi-tai-duong-tinh-voi-sars-co-v-2-sau-khi-xuat-vien-2-tuan-20201128163623941.htm"
+  title="Một người tái dương tính với SARS-CoV-2 sau khi xuất viện 2 tuần">
+  
+  
+                        
+                        <div class="dt-thumbnail dt-thumbnail--3x2">
+                            <img alt="Một người tái dương tính với SARS-CoV-2 sau khi xuất viện 2 tuần" class=" no-img" lazy-src="https://icdn.dantri.com.vn/zoom/480_320/2020/09/21/laymauxetnghiem-141596862548511-1600643450547.jpg" src="https://icdn.dantri.com.vn/zoom/480_320/filters:quality(0)/2020/09/21/laymauxetnghiem-141596862548511-1600643450547.jpg">
+                        </div> 
+                        
+                         
+</a>
+
+
+          <div class="news-item__content">
+           
+
+            <h3 class='news-item__title'>
+                    
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|16"
+  href="/suc-khoe/mot-nguoi-tai-duong-tinh-voi-sars-co-v-2-sau-khi-xuat-vien-2-tuan-20201128163623941.htm"
+  title="Một người tái dương tính với SARS-CoV-2 sau khi xuất viện 2 tuần">
+  
+  Một người tái dương tính với SARS-CoV-2 sau khi xuất viện 2 tuần    
+</a>
+
+
+  
+           
+            </h3>
+            
+                                     <a data-utm="Cate_DaiDichCovid19|MainList|16" class="news-item__sapo" title="Một người tái dương tính với SARS-CoV-2 sau khi xuất viện 2 tuần" href="/suc-khoe/mot-nguoi-tai-duong-tinh-voi-sars-co-v-2-sau-khi-xuat-vien-2-tuan-20201128163623941.htm">(Dân trí)&nbsp;- Sau 8 lần xét nghiệm, bệnh nhân 1138 được công bố khỏi bệnh và được xuất viện để tiếp tục tự cách ly tại nhà. Nhưng sau 14 ngày, bệnh nhân này tái dương tính với SARS-CoV-2.</a>
+                                         <div class="news-item__meta">
+                                            <span class="news-item__time">Thứ Bảy 28/11/2020 - 17:18</span>
+                </div>
+                    </div>
+    </div>
+
+          </li>
+          <li>
+            
+    <div class="news-item news-item--timeline news-item--left2right">
+        
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|17"
+ class="news-item__avatar"   href="/the-gioi/nguoi-my-do-xo-dung-leu-xep-hang-qua-dem-san-giam-gia-ngay-thu-6-den-20201128073929140.htm"
+  title="Người Mỹ đổ xô dựng lều, xếp hàng qua đêm săn giảm giá ngày &quot;Thứ 6 đen&quot;">
+  
+  
+                        
+                        <div class="dt-thumbnail dt-thumbnail--3x2">
+                            <img alt="Người Mỹ đổ xô dựng lều, xếp hàng qua đêm săn giảm giá ngày &quot;Thứ 6 đen&quot;" class=" no-img" lazy-src="https://icdn.dantri.com.vn/zoom/480_320/2020/11/28/361726388992605-virginia-acrowdoftightlypackedshopperswerespottedoutsidea-111606481414409-1606522017649.jpg" src="https://icdn.dantri.com.vn/zoom/480_320/filters:quality(0)/2020/11/28/361726388992605-virginia-acrowdoftightlypackedshopperswerespottedoutsidea-111606481414409-1606522017649.jpg">
+                        </div> 
+                        
+                         
+</a>
+
+
+          <div class="news-item__content">
+           
+
+            <h3 class='news-item__title'>
+                    
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|17"
+  href="/the-gioi/nguoi-my-do-xo-dung-leu-xep-hang-qua-dem-san-giam-gia-ngay-thu-6-den-20201128073929140.htm"
+  title="Người Mỹ đổ xô dựng lều, xếp hàng qua đêm săn giảm giá ngày &quot;Thứ 6 đen&quot;">
+  
+  Người Mỹ đổ xô dựng lều, xếp hàng qua đêm săn giảm giá ngày &quot;Thứ 6 đen&quot;        <i class="news-title-icon ico-news-type-img"> </i>  
+  
+</a>
+
+
+  
+           
+            </h3>
+            
+                                     <a data-utm="Cate_DaiDichCovid19|MainList|17" class="news-item__sapo" title="Người Mỹ đổ xô dựng lều, xếp hàng qua đêm săn giảm giá ngày &quot;Thứ 6 đen&quot;" href="/the-gioi/nguoi-my-do-xo-dung-leu-xep-hang-qua-dem-san-giam-gia-ngay-thu-6-den-20201128073929140.htm">(Dân trí)&nbsp;- Nhiều người dựng lều, xếp hàng ngủ qua đêm trước các cửa hàng ở Mỹ để mua hàng giảm giá ngày "Thứ 6 đen" bất chấp dịch Covid-19.</a>
+                                         <div class="news-item__meta">
+                                            <span class="news-item__time">Thứ Bảy 28/11/2020 - 08:44</span>
+                </div>
+                    </div>
+    </div>
+
+          </li>
+          <li>
+            
+    <div class="news-item news-item--timeline news-item--left2right">
+        
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|18"
+ class="news-item__avatar"   href="/suc-khoe/toi-2711-viet-nam-them-8-ca-mac-covid-19-20201127180437808.htm"
+  title="Tối 27/11, Việt Nam thêm 8 ca mắc Covid-19">
+  
+  
+                        
+                        <div class="dt-thumbnail dt-thumbnail--3x2">
+                            <img alt="Tối 27/11, Việt Nam thêm 8 ca mắc Covid-19" class=" no-img" lazy-src="https://icdn.dantri.com.vn/zoom/480_320/2020/09/17/xetnghiempcrcaugiaysontung-14-1600339360942.jpg" src="https://icdn.dantri.com.vn/zoom/480_320/filters:quality(0)/2020/09/17/xetnghiempcrcaugiaysontung-14-1600339360942.jpg">
+                        </div> 
+                        
+                         
+</a>
+
+
+          <div class="news-item__content">
+           
+
+            <h3 class='news-item__title'>
+                    
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|18"
+  href="/suc-khoe/toi-2711-viet-nam-them-8-ca-mac-covid-19-20201127180437808.htm"
+  title="Tối 27/11, Việt Nam thêm 8 ca mắc Covid-19">
+  
+  Tối 27/11, Việt Nam thêm 8 ca mắc Covid-19    
+</a>
+
+
+  
+           
+            </h3>
+            
+                                     <a data-utm="Cate_DaiDichCovid19|MainList|18" class="news-item__sapo" title="Tối 27/11, Việt Nam thêm 8 ca mắc Covid-19" href="/suc-khoe/toi-2711-viet-nam-them-8-ca-mac-covid-19-20201127180437808.htm">(Dân trí)&nbsp;- Bộ Y tế thông đây đều là ca nhập cảnh, trong đó chủ yếu là người nhập cảnh từ Nga về. Đặc biệt có chuyến bay từ Nga về có đến 25 trường hợp dương tính với SARS-CoV-2.</a>
+                                         <div class="news-item__meta">
+                                            <span class="news-item__time">Thứ Sáu 27/11/2020 - 18:04</span>
+                </div>
+                    </div>
+    </div>
+
+          </li>
+          <li>
+            
+    <div class="news-item news-item--timeline news-item--left2right">
+        
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|19"
+ class="news-item__avatar"   href="/the-gioi/ong-trump-tuyen-bo-my-se-phan-phoi-vac-xin-covid-19-vao-tuan-toi-20201127075506109.htm"
+  title="Ông Trump tuyên bố Mỹ sẽ phân phối vắc xin Covid-19 vào tuần tới">
+  
+  
+                        
+                        <div class="dt-thumbnail dt-thumbnail--3x2">
+                            <img alt="Ông Trump tuyên bố Mỹ sẽ phân phối vắc xin Covid-19 vào tuần tới" class=" no-img" lazy-src="https://icdn.dantri.com.vn/zoom/480_320/2020/09/17/my-1600313890797.jpg" src="https://icdn.dantri.com.vn/zoom/480_320/filters:quality(0)/2020/09/17/my-1600313890797.jpg">
+                        </div> 
+                        
+                         
+</a>
+
+
+          <div class="news-item__content">
+           
+
+            <h3 class='news-item__title'>
+                    
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|19"
+  href="/the-gioi/ong-trump-tuyen-bo-my-se-phan-phoi-vac-xin-covid-19-vao-tuan-toi-20201127075506109.htm"
+  title="Ông Trump tuyên bố Mỹ sẽ phân phối vắc xin Covid-19 vào tuần tới">
+  
+  Ông Trump tuyên bố Mỹ sẽ phân phối vắc xin Covid-19 vào tuần tới    
+</a>
+
+
+  
+           
+            </h3>
+            
+                                     <a data-utm="Cate_DaiDichCovid19|MainList|19" class="news-item__sapo" title="Ông Trump tuyên bố Mỹ sẽ phân phối vắc xin Covid-19 vào tuần tới" href="/the-gioi/ong-trump-tuyen-bo-my-se-phan-phoi-vac-xin-covid-19-vao-tuan-toi-20201127075506109.htm">(Dân trí)&nbsp;- Tổng thống Donald Trump cho biết, Mỹ sẽ bắt đầu phân phối vắc xin ngừa Covid-19 từ đầu tuần tới trong bối cảnh đại dịch tiếp tục bùng phát mạnh.</a>
+                                         <div class="news-item__meta">
+                                            <span class="news-item__time">Thứ Sáu 27/11/2020 - 08:17</span>
+                </div>
+                    </div>
+    </div>
+
+          </li>
+          <li>
+            
+    <div class="news-item news-item--timeline news-item--left2right news-item--large">
+        
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|20"
+ class="news-item__avatar"   href="/the-gioi/truyen-thong-trung-quoc-no-luc-day-nguon-goc-covid-19-ra-nuoc-ngoai-20201126215124871.htm"
+  title="Truyền thông Trung Quốc nỗ lực &quot;đẩy&quot; nguồn gốc Covid-19 ra nước ngoài">
+  
+  
+                        
+                        <div class="dt-thumbnail dt-thumbnail--3x2">
+                            <img alt="Truyền thông Trung Quốc nỗ lực &quot;đẩy&quot; nguồn gốc Covid-19 ra nước ngoài" class=" no-img" lazy-src="https://icdn.dantri.com.vn/zoom/920_612/2020/11/26/filephotoworkercollectsaswabfromamanfornucleicacidtestingatamakeshifttestingsiteindalian-11596180421705-1606402185995.jpg" src="https://icdn.dantri.com.vn/zoom/920_612/filters:quality(0)/2020/11/26/filephotoworkercollectsaswabfromamanfornucleicacidtestingatamakeshifttestingsiteindalian-11596180421705-1606402185995.jpg">
+                        </div> 
+                        
+                         
+</a>
+
+
+          <div class="news-item__content">
+           
+
+            <h3 class='news-item__title'>
+                    
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|20"
+  href="/the-gioi/truyen-thong-trung-quoc-no-luc-day-nguon-goc-covid-19-ra-nuoc-ngoai-20201126215124871.htm"
+  title="Truyền thông Trung Quốc nỗ lực &quot;đẩy&quot; nguồn gốc Covid-19 ra nước ngoài">
+  
+  Truyền thông Trung Quốc nỗ lực &quot;đẩy&quot; nguồn gốc Covid-19 ra nước ngoài    
+</a>
+
+
+  
+           
+            </h3>
+            
+                                     <a data-utm="Cate_DaiDichCovid19|MainList|20" class="news-item__sapo" title="Truyền thông Trung Quốc nỗ lực &quot;đẩy&quot; nguồn gốc Covid-19 ra nước ngoài" href="/the-gioi/truyen-thong-trung-quoc-no-luc-day-nguon-goc-covid-19-ra-nuoc-ngoai-20201126215124871.htm">(Dân trí)&nbsp;- Các hãng truyền thông Trung Quốc được cho đang tích cực tuyên truyền các thông điệp rằng vi rút SARS-CoV-2 đã xuất hiện ở nước ngoài trước khi nó được phát hiện vào cuối năm ngoái ở Vũ Hán.</a>
+                                         <div class="news-item__meta">
+                                            <span class="news-item__time">Thứ Năm 26/11/2020 - 22:59</span>
+                </div>
+                    </div>
+    </div>
+
+          </li>
+          <li>
+            
+    <div class="news-item news-item--timeline news-item--left2right">
+        
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|21"
+ class="news-item__avatar"   href="/suc-khoe/toi-2611-viet-nam-them-10-ca-mac-covid-19-duoc-cach-ly-tai-tp-hcm-20201126180404847.htm"
+  title="Tối 26/11, Việt Nam thêm 10 ca mắc Covid-19 được cách ly tại TP HCM">
+  
+  
+                        
+                        <div class="dt-thumbnail dt-thumbnail--3x2">
+                            <img alt="Tối 26/11, Việt Nam thêm 10 ca mắc Covid-19 được cách ly tại TP HCM" class=" no-img" lazy-src="https://icdn.dantri.com.vn/zoom/480_320/2020/09/10/xetnghiempcrcaugiaysontung-4-1599692027510.jpg" src="https://icdn.dantri.com.vn/zoom/480_320/filters:quality(0)/2020/09/10/xetnghiempcrcaugiaysontung-4-1599692027510.jpg">
+                        </div> 
+                        
+                         
+</a>
+
+
+          <div class="news-item__content">
+           
+
+            <h3 class='news-item__title'>
+                    
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|21"
+  href="/suc-khoe/toi-2611-viet-nam-them-10-ca-mac-covid-19-duoc-cach-ly-tai-tp-hcm-20201126180404847.htm"
+  title="Tối 26/11, Việt Nam thêm 10 ca mắc Covid-19 được cách ly tại TP HCM">
+  
+  Tối 26/11, Việt Nam thêm 10 ca mắc Covid-19 được cách ly tại TP HCM    
+</a>
+
+
+  
+           
+            </h3>
+            
+                                     <a data-utm="Cate_DaiDichCovid19|MainList|21" class="news-item__sapo" title="Tối 26/11, Việt Nam thêm 10 ca mắc Covid-19 được cách ly tại TP HCM" href="/suc-khoe/toi-2611-viet-nam-them-10-ca-mac-covid-19-duoc-cach-ly-tai-tp-hcm-20201126180404847.htm">(Dân trí)&nbsp;- Bộ Y tế thông tin 10 bệnh nhân này đều là người nhập cảnh gồm 8 người từ Nga về và 2 người về nước từ Pháp</a>
+                                         <div class="news-item__meta">
+                                            <span class="news-item__time">Thứ Năm 26/11/2020 - 18:04</span>
+                </div>
+                    </div>
+    </div>
+
+          </li>
+          <li>
+            
+    <div class="news-item news-item--timeline news-item--left2right">
+        
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|22"
+ class="news-item__avatar"   href="/suc-khoe/mua-lanh-khong-giu-am-duong-ho-hap-se-tang-kha-nang-nhiem-covid-19-hon-20201125064933072.htm"
+  title="&quot;Mùa lạnh không giữ ấm đường hô hấp, sẽ tăng khả năng nhiễm Covid-19 hơn&quot;">
+  
+  
+                        
+                        <div class="dt-thumbnail dt-thumbnail--3x2">
+                            <img alt="&quot;Mùa lạnh không giữ ấm đường hô hấp, sẽ tăng khả năng nhiễm Covid-19 hơn&quot;" class=" no-img" lazy-src="https://icdn.dantri.com.vn/zoom/480_320/2020/11/26/dich-benh-dong-xuan-24-1606379201804.jpg" src="https://icdn.dantri.com.vn/zoom/480_320/filters:quality(0)/2020/11/26/dich-benh-dong-xuan-24-1606379201804.jpg">
+                        </div> 
+                        
+                         
+</a>
+
+
+          <div class="news-item__content">
+           
+
+            <h3 class='news-item__title'>
+                    
+
+
+<a  data-utm="Cate_DaiDichCovid19|MainList|22"
+  href="/suc-khoe/mua-lanh-khong-giu-am-duong-ho-hap-se-tang-kha-nang-nhiem-covid-19-hon-20201125064933072.htm"
+  title="&quot;Mùa lạnh không giữ ấm đường hô hấp, sẽ tăng khả năng nhiễm Covid-19 hơn&quot;">
+  
+  &quot;Mùa lạnh không giữ ấm đường hô hấp, sẽ tăng khả năng nhiễm Covid-19 hơn&quot;    
+</a>
+
+
+  
+           
+            </h3>
+            
+                                     <a data-utm="Cate_DaiDichCovid19|MainList|22" class="news-item__sapo" title="&quot;Mùa lạnh không giữ ấm đường hô hấp, sẽ tăng khả năng nhiễm Covid-19 hơn&quot;" href="/suc-khoe/mua-lanh-khong-giu-am-duong-ho-hap-se-tang-kha-nang-nhiem-covid-19-hon-20201125064933072.htm">(Dân trí)&nbsp;- Bác sĩ Nguyễn Trung Cấp đã cho biết như vậy tại buổi giao lưu trực tuyến "Ứng phó với đại dịch Covid-19 trong mùa đông xuân", diễn ra chiều 26/11 tại báo điện tử Dân trí.</a>
+                                         <div class="news-item__meta">
+                                            <span class="news-item__time">Thứ Năm 26/11/2020 - 13:58</span>
+                </div>
+                    </div>
+    </div>
+
+          </li>
+      </ul>
+      <input type="hidden" name="hidCategoryPath" id="hidCategoryPath" value="/suc-khoe/dai-dich-covid-19"/>
+      <input type="hidden" name="hidCurrentPage" id="hidCurrentPage" value="1"/>
+      <input type="hidden" name="hidCurrentDate" id="hidCurrentDate" value=""/>
+        <ul class="list-unstyled dt-category-actions">
+          
+      <li>
+        <a class="disabled btn btn-light btn-block btn-lg" href="/suc-khoe/dai-dich-covid-19.htm">
+          Trang trước
+        </a>
+      </li>
+     
+          <li>
+            <a category-by-date class="btn btn-light btn-block btn-lg " href="">
+              Xem theo ngày
+            </a>
+          </li>
+
+          
+      <li>
+        <a class="text-primary btn btn-light btn-block btn-lg" href="/suc-khoe/dai-dich-covid-19/trang-2.htm">
+          Trang sau
+        </a>
+      </li>
+     
+
+        </ul>
+      
+    </div>
+    
+                <div class="col col--secondary" id="xds-101" >
+  
+            </div>
+
+  </div>
+
+  <div id="adm_sticky_footer"></div>
+            <div id="xds-105"></div>
+
+
+</div>
+
+
+
+</main>
+
+<footer class="dt-footer">
+  
+
+
+  <div class="dt-footer__content">
+    <div class="container">
+      <div class="row">
+        <div class="dt-footer__info col-6">
+          <p>Cơ quan của Bộ Lao động - Thương binh và Xã hội</p>
+          <p>Tổng biên tập: Phạm Tuấn Anh</p>
+          <p>
+            Giấy phép hoạt động báo điện tử Dân trí số 298/GP - BTTTT Hà Nội, ngày 15-07-2020.
+          </p>
+          <p>Tòa soạn: Nhà 48, ngõ 2 Giảng Võ, Cát Linh, Đống Đa, Hà Nội</p>
+          <p>
+            Điện thoại: <a href="tel:024-3736-6491">024-3736-6491</a>. Fax:
+            <a href="tel:024-3736-6491">024-3736-6491</a>
+          </p>
+          <p>
+            Email: <a href="mailto:info@dantri.com.vn">info@dantri.com.vn</a>.
+            Website:
+            <a href="https://www.dantri.com.vn">https://www.dantri.com.vn</a>
+          </p>
+          <p>
+            Mọi hành động sử dụng nội dung đăng tải trên Báo điện tử Dân trí tại
+            địa chỉ www.dantri.com.vn phải có sự đồng ý bằng văn bản của Báo
+            điện tử Dân trí.
+          </p>
+        </div>
+        <div class="col-1"></div>
+        <div class="dt-footer__ads col-4">
+          <p class="dt-footer_ads-info">
+            Liên hệ quảng cáo:&nbsp;<a href="tel:0945540330">0945.54.03.03</a>
+            
+          </p>
+          <p>Email: <a href="mailto:quangcao@dantri.com.vn">quangcao@dantri.com.vn</a></p>
+          <p>
+            <a switch-version href="javascript:void(0);"><strong>Xem bản mobile</strong></a>
+          </p>
+          <div class="dt-footer__app clearfix">
+            <a aria-label="Báo Dân trí ios" title="Báo Dân trí - Dantri.com.vn" target="_blank" rel="noopener" href="https://apps.apple.com/vn/app/b%C3%A1o-d%C3%A2n-tr%C3%AD-dantri-com-vn/id1455334618?l=vi">
+              <i class="dt-icon icon-app-store"></i>
+            </a>
+            <a aria-label="Báo Dân trí android" title="Báo Dân trí - Dantri.com.vn" target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=vn.com.dantrinews.android">
+              <i class="dt-icon icon-play-store"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>var jsSettings={"ImageDomain":"https://icdn.dantri.com.vn","VideoDomain":"https://vcdn.dantri.com.vn","AudioDomain":"https://acdn.dantri.com.vn","CommentsDomain":"https://comment.dantri.com.vn","ApiComments":"https://apicomment.dantri.com.vn","DuLichDomain":"https://dulich.dantri.com.vn","TuyenSinhDomain":"https://tuyensinh.dantri.com.vn","DuHocDomain":"https://duhoc.dantri.com.vn","WebDomain":"https://dantri.com.vn","MobileDomain":"https://dantri.com.vn","CaptchaDomain":"https://captcha.dantri.com.vn","WebApi":"https://webapi.dantri.com.vn","AssertsDomain":"https://cdnweb.dantri.com.vn","ResourceDomains":["https://*.dantri.com.vn/**","http://*.dantri.com.vn/**"],"CurrentDomain":"https://dantri.com.vn","IsMobile":0,"UngHoDomain":"https://ungho.dantri.com.vn","FacebookAppId":"164035690775918","CommonCDN":"https://cdnasset.dantri.com.vn","IsAmp":0,"BlockedAds":false,"Features":{"BannerUngThu":false},"AppType":"Web","XdsSlots":{"INVALID":"xds-0","TOP_HEADER":"xds-1","TOP_NEXT_TO_DT_LOGO":"xds-2","BACKGROUP":"xds-3","HOME_BALLOON_ADS":"xds-4","HOME_BACKGROUND":"xds-40","HOME_TOP_HEADER":"xds-41","HOME_TOP_RIGHT":"xds-50","HOME_MIDDLE_RIGHT":"xds-51","HOME_CENTER_BANNER":"xds-52","HOME_NATIVE_1":"xds-53","HOME_NATIVE_2":"xds-54","HOME_BOTTOM":"xds-55","HOME_MIDDLE_COLUMN_BOTTOM":"xds-56","HOME_PRIMARY_TOP":"xds-57","HOME_PRIMARY_BOTTOM":"xds-58","HOME_NATIVE_3":"xds-59","HOME_NATIVE_4":"xds-60","HOME_HORIZONTAL_0":"xds-70","HOME_HORIZONTAL_1":"xds-71","HOME_HORIZONTAL_2":"xds-72","HOME_HORIZONTAL_3":"xds-73","HOME_HORIZONTAL_4":"xds-74","HOME_HORIZONTAL_5":"xds-75","HOME_HORIZONTAL_6":"xds-76","HOME_HORIZONTAL_7":"xds-77","CATEGORY_BACKGROUND":"xds-90","CATEGORY_TOP_HEADER":"xds-92","CATEGORY_TOP_RIGHT":"xds-100","CATEGORY_MIDDLE_RIGHT":"xds-101","CATEGORY_MIDDLE_CENTER":"xds-102","CATEGORY_NATIVE_1":"xds-103","CATEGORY_NATIVE_2":"xds-104","CATEGORY_BOTTOM":"xds-105","CATEGORY_NATIVE_3":"xds-106","CATEGORY_TOP_READ":"xds-107","CATEGORY_NATIVE_4":"xds-108","ARTICLE_RIGHT":"xds-150","ARTICLE_BOTTOM":"xds-151","ARTICLE_BANNER":"xds-152","ARTICLE_NATIVE_1":"xds-153","ARTICLE_NATIVE_2":"xds-154","ARTICLE_IN_PAGE_1":"xds-155","ARTICLE_IN_PAGE_2":"xds-156","ARTICLE_TOP_HEADER":"xds-157","ARTICLE_BOTTOM_PAGE":"xds-158","ARTICLE_NATIVE_3":"xds-159","MOBILE_TOP_HEADER":"xds-200","MOBILE_TOP_MOST":"xds-201","MOBILE_AFTER_BREADCRUMB":"xds-250","MOBILE_CATE_NATIVE_1":"xds-260","MOBILE_CATE_NATIVE_2":"xds-261","MOBILE_CATE_NATIVE_3":"xds-262","MOBILE_CATE_E_MAGAZINE_1":"xds-263","MOBILE_CATE_BOTTOM":"xds-264","MOBILE_CATEGORY_CENTER_1":"xds-265","MOBILE_CATE_ABOVE_NAV":"xds-266","MOBILE_BEFORE_FOOTER":"xds-300","MOBILE_HOME_CENTER_1":"xds-301","MOBILE_HOME_CENTER_2":"xds-302","MOBILE_BIG_ARTICLE_1":"xds-305","MOBILE_BIG_ARTICLE_2":"xds-306","MOBILE_HOME_CENTER_3":"xds-307","MOBILE_HOME_CENTER_4":"xds-308","MOBILE_HOME_CENTER_5":"xds-309","MOBILE_BEFORE_VIDEO":"xds-400","MOBILE_HOME_BOTTOM":"xds-401","MOBILE_FIRST_10_ARTICLE":"xds-500","MOBILE_IN_PAGE_1":"xds-3030","MOBILE_IN_PAGE_2":"xds-3040","MOBILE_BIG_ARTICLE_3":"xds-3061","MOBILE_BIG_ARTICLE_4":"xds-3062","MOBILE_BIG_ARTICLE_5":"xds-3063","MOBILE_BEFORE_COMMENT":"xds-3064","MOBILE_HOME_CENTER_6":"xds-3091","MOBILE_HOME_CENTER_7":"xds-3092","MOBILE_HOME_CENTER_8":"xds-3093","MOBILE_ARTICLE_E_MAGAZINE":"xds-4010","MOBILE_ARTICLE_AUTHOR_SIGN":"xds-5001","AMP_AUTO_ADS":"xds-9999","AMP_HOME_BEFORE_TTSK":"xds-10000","AMP_HOME_TTSK_5TH":"xds-10001","AMP_HOME_BEFORE_VIDEO":"xds-10002","AMP_HOME_BEFORE_THE_THAO":"xds-10003","AMP_HOME_NHAN_AI":"xds-10004","AMP_HOME_VAN_HOA":"xds-10005","AMP_HOME_PHAP_LUAT":"xds-10006","AMP_HOME_OTO":"xds-10007","AMP_HOME_KHOA_HOC":"xds-10008","AMP_HOME_DU_HOC":"xds-10009","AMP_HOME_BLOG":"xds-10010","AMP_ARTICLE_AFTER_SAPO":"xds-10050","AMP_ARTICLE_PARAGRAPH9":"xds-10051","AMP_ARTICLE_PARAGRAPH3":"xds-10052","AMP_ARTICLE_SHARE":"xds-10053","AMP_ARTICLE_LASTEST":"xds-10060","AMP_ARTICLE_FOOTER":"xds-10061","AMP_CATE_TOP":"xds-10100","AMP_CATE_TOP4":"xds-10101","AMP_CATE_AFTER_VIDEO":"xds-10102","AMP_CATE_NEWS_5TH":"xds-10103","AMP_CATE_NEWS_BOTTOM":"xds-10104","AMP_CATE_FOOTER":"xds-10105","AMP_TAG_TOP":"xds-10150","AMP_TAG_MIDDLE":"xds-10151","AMP_TAG_FOOTER":"xds-10152","INTER_WEB_ARTICLE_TIN_LIEN_QUAN":"xds-20000","INTER_MOBILE_ARTICLE_TIN_LIEN_QUAN":"xds-30000","CAFE_HOZ":"xds-1000000"},"IsInter":false,"Version":"637424367431866840","GoogleCaptchaConfig":{"SiteKey":"6LfAP8kZAAAAAPiZ8ZFuHdhifvNch-G9O1-aLQRs","SecretKey":null}};</script>
+
+    
+  
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"Organization","name":"Báo Dân Trí","url":"https://dantri.com.vn","slogan":"Tin tức Việt Nam và quốc tế nóng, nhanh, cập nhật 24h","logo":"https://cdnweb.dantri.com.vn/bundle/static/assets/logo_dantri.png","email":"info@dantri.com.vn","additionalType":"https://vi.wikipedia.org/wiki/B%C3%A1o_%C4%91i%E1%BB%87n_t%E1%BB%AD","sameAs":["https://www.facebook.com/baodantridientu","https://vi.wikipedia.org/wiki/D%C3%A2n_tr%C3%AD_(b%C3%A1o)"],"address":{"@type":"PostalAddress","streetAddress":"Nhà 48, ngõ 2 Giảng Võ, Cát Linh, Đống Đa","addressLocality":"Hà Nội"},"contactPoint":[{"@type":"ContactPoint","telephone":"+842437366491","contactOption":"TollFree","contactType":"customer service","areaServed":"VN"}]}</script>
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[[{"@type":"ListItem","position":1,"name":"Trang chủ","item":"https://dantri.com.vn/"}],[{"@type":"ListItem","position":2,"name":"Sức khỏe","item":"https://dantri.com.vn/suc-khoe.htm"}],[{"@type":"ListItem","position":3,"name":"Đại dịch Covid-19","item":"https://dantri.com.vn/suc-khoe/dai-dich-covid-19.htm"}]]}</script>
+    <script>var breadcrumbs=[0,7,978];</script>
+    
+
+
+  
+
+
+
+  <script  src="https://cdnweb.dantri.com.vn/bundle/static/dantri.min.js?_=f5470267"></script>
+<script  src="https://cdnweb.dantri.com.vn/bundle/static/vdlibs~dantri.min.js?_=f5470267"></script>
+<script  src="https://cdnweb.dantri.com.vn/bundle/static/vendors~dantri.min.js?_=f5470267"></script>
+      
+</body>
+</html>
